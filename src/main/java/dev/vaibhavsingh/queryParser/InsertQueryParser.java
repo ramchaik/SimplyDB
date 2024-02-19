@@ -16,7 +16,7 @@ public class InsertQueryParser implements SQLParser {
             String columns = matcher.group(2);
             String values = matcher.group(3);
 
-            // Here you can perform further validation on table name, columns, and values
+            // perform further validation on table name, columns, and values
             System.out.println("Table Name: " + tableName);
             System.out.println("Columns: " + columns);
             System.out.println("Values: " + values);

@@ -15,7 +15,7 @@ public class CreateQueryParser implements SQLParser {
             String tableName = matcher.group(1);
             String columns = matcher.group(2);
 
-            // Here you can perform further validation on table name and columns
+            // perform further validation on table name and columns
             System.out.println("Table Name: " + tableName);
             System.out.println("Columns: " + columns);
 

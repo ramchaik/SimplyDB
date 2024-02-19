@@ -19,7 +19,7 @@ public class SelectQueryParser implements SQLParser {
             String tableName = matcher.group(2);
             String whereClause = matcher.group(4); // Optional WHERE clause
 
-            // Here you can perform further validation on columns, table name, and where clause
+            // perform further validation on columns, table name, and where clause
             System.out.println("Columns: " + columns);
             System.out.println("Table Name: " + tableName);
             System.out.println("Where Clause: " + whereClause);
