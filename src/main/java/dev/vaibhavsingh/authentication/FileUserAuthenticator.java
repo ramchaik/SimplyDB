@@ -8,11 +8,18 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 /**
- * Handles user authentication using a file-based user database.
+ * Authenticates users against a file-based user database.
  */
 public class FileUserAuthenticator implements UserAuthenticator {
     private static final String USER_FILE = "/Users/lib-user/vaibhav/CSCI5408/Project/Assignment1/simple-dbms/src/main/java/dev/vaibhavsingh/data/admin/user/users.txt";
 
+    /**
+     * Authenticates a user with the given username and password.
+     *
+     * @param username The username of the user.
+     * @param password The password of the user.
+     * @return True if the user is authenticated, false otherwise.
+     */
     @Override
     public boolean authenticate(String username, String password) {
         try (BufferedReader reader = new BufferedReader(new FileReader(USER_FILE))) {
@@ -30,6 +37,12 @@ public class FileUserAuthenticator implements UserAuthenticator {
         return false;
     }
 
+    /**
+     * Hashes the given password.
+     *
+     * @param password The password to hash.
+     * @return The hashed password.
+     */
     private String hashPassword(String password) {
         try {
             MessageDigest digest = MessageDigest.getInstance("SHA-256");
@@ -41,6 +54,12 @@ public class FileUserAuthenticator implements UserAuthenticator {
         }
     }
 
+    /**
+     * Converts a byte array to a hexadecimal string.
+     *
+     * @param bytes The byte array to convert.
+     * @return The hexadecimal string.
+     */
     private String bytesToHex(byte[] bytes) {
         StringBuilder hexString = new StringBuilder();
         for (byte b : bytes) {
