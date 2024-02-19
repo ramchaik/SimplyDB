@@ -4,8 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4a802b0-ade9-4112-8627-82f4f89071d5" name="Changes" comment="feat: add auth&#10;&#10;# 50-character subject line&#10;#&#10;# 72-character wrapped longer description. This should answer:&#10;#&#10;# * Why was this change necessary?&#10;# * How does it address the problem?&#10;# * Are there any side effects?&#10;#&#10;# Include a link to the ticket, if any.&#10;#&#10;# Add co-authors if you worked on this code with others:&#10;#&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;">
+    <list default="true" id="a4a802b0-ade9-4112-8627-82f4f89071d5" name="Changes" comment="&#10;&#10;# 50-character subject line&#10;#&#10;# 72-character wrapped longer description. This should answer:&#10;#&#10;# * Why was this change necessary?&#10;# * How does it address the problem?&#10;# * Are there any side effects?&#10;#&#10;# Include a link to the ticket, if any.&#10;#&#10;# Add co-authors if you worked on this code with others:&#10;#&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/authentication/CaptchaGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/authentication/FileUserAuthenticator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/authentication/RandomCaptchaGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/authentication/UserAuthenticator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/authentication/UserAuthenticatorManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/constants/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/queryParser/CreateQueryParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/queryParser/InsertQueryParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/queryParser/SQLParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/queryParser/SQLParserFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/queryParser/SelectQueryParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/client/Authentication.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +29,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -22,31 +37,35 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2cW38s7DUPojxpFItKehdFA0MG9" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/data/user" />
@@ -89,7 +108,8 @@
       <option name="presentableId" value="Default" />
       <updated>1708200960261</updated>
       <workItem from="1708200963805" duration="1638000" />
-      <workItem from="1708213353597" duration="7328000" />
+      <workItem from="1708213353597" duration="11562000" />
+      <workItem from="1708312108739" duration="5209000" />
     </task>
     <task id="LOCAL-00001" summary="feat: setup initial&#10;&#10;# 50-character subject line&#10;#&#10;# 72-character wrapped longer description. This should answer:&#10;#&#10;# * Why was this change necessary?&#10;# * How does it address the problem?&#10;# * Are there any side effects?&#10;#&#10;# Include a link to the ticket, if any.&#10;#&#10;# Add co-authors if you worked on this code with others:&#10;#&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;">
       <option name="closed" value="true" />
@@ -116,6 +136,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: setup initial&#10;&#10;# 50-character subject line&#10;#&#10;# 72-character wrapped longer description. This should answer:&#10;#&#10;# * Why was this change necessary?&#10;# * How does it address the problem?&#10;# * Are there any side effects?&#10;#&#10;# Include a link to the ticket, if any.&#10;#&#10;# Add co-authors if you worked on this code with others:&#10;#&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;" />
     <MESSAGE value="feat: add auth&#10;&#10;# 50-character subject line&#10;#&#10;# 72-character wrapped longer description. This should answer:&#10;#&#10;# * Why was this change necessary?&#10;# * How does it address the problem?&#10;# * Are there any side effects?&#10;#&#10;# Include a link to the ticket, if any.&#10;#&#10;# Add co-authors if you worked on this code with others:&#10;#&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add auth&#10;&#10;# 50-character subject line&#10;#&#10;# 72-character wrapped longer description. This should answer:&#10;#&#10;# * Why was this change necessary?&#10;# * How does it address the problem?&#10;# * Are there any side effects?&#10;#&#10;# Include a link to the ticket, if any.&#10;#&#10;# Add co-authors if you worked on this code with others:&#10;#&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;" />
+    <MESSAGE value="feat: add auth" />
+    <MESSAGE value="&#10;&#10;# 50-character subject line&#10;#&#10;# 72-character wrapped longer description. This should answer:&#10;#&#10;# * Why was this change necessary?&#10;# * How does it address the problem?&#10;# * Are there any side effects?&#10;#&#10;# Include a link to the ticket, if any.&#10;#&#10;# Add co-authors if you worked on this code with others:&#10;#&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&#10;&#10;# 50-character subject line&#10;#&#10;# 72-character wrapped longer description. This should answer:&#10;#&#10;# * Why was this change necessary?&#10;# * How does it address the problem?&#10;# * Are there any side effects?&#10;#&#10;# Include a link to the ticket, if any.&#10;#&#10;# Add co-authors if you worked on this code with others:&#10;#&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;" />
   </component>
 </project>
