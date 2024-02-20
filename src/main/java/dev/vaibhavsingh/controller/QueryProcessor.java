@@ -1,10 +1,8 @@
 package dev.vaibhavsingh.controller;
 
 import dev.vaibhavsingh.data.TableManager;
-import dev.vaibhavsingh.dto.ParsedCreateColumn;
 import dev.vaibhavsingh.dto.response.ParsedSQLResponse;
 import dev.vaibhavsingh.parser.query.CreateQueryParser;
-import dev.vaibhavsingh.parser.query.SQLParser;
 
 import static dev.vaibhavsingh.constants.DatabaseConstants.DATABASE_NAME;
 
