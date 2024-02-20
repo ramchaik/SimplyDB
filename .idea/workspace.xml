@@ -4,11 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4a802b0-ade9-4112-8627-82f4f89071d5" name="Changes" comment="feat: add data controller&#10;&#10;# 50-character subject line&#10;#&#10;# 72-character wrapped longer description. This should answer:&#10;#&#10;# * Why was this change necessary?&#10;# * How does it address the problem?&#10;# * Are there any side effects?&#10;#&#10;# Include a link to the ticket, if any.&#10;#&#10;# Add co-authors if you worked on this code with others:&#10;#&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;">
+    <list default="true" id="a4a802b0-ade9-4112-8627-82f4f89071d5" name="Changes" comment="&#10;&#10;# 50-character subject line&#10;#&#10;# 72-character wrapped longer description. This should answer:&#10;#&#10;# * Why was this change necessary?&#10;# * How does it address the problem?&#10;# * Are there any side effects?&#10;#&#10;# Include a link to the ticket, if any.&#10;#&#10;# Add co-authors if you worked on this code with others:&#10;#&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;">
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/controller/QueryProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/dto/ParsedCreateColumn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/dto/response/ParsedSQLResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dev/vaibhavsingh/data/AESEncryptionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dev/vaibhavsingh/data/DatabaseManagerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dev/vaibhavsingh/data/TableManagerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/data/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/data/DatabaseManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/data/Encryption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/data/AESEncryption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/authentication/FileUserAuthenticator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/authentication/FileUserAuthenticator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/constants/DatabaseConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/constants/DatabaseConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/data/AESEncryption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/utils/AESEncryption.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/data/TableManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/data/TableManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/queryParser/CreateQueryParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/parser/query/CreateQueryParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/queryParser/InsertQueryParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/parser/query/InsertQueryParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/queryParser/SQLParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/parser/query/SQLParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/queryParser/SQLParserFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/parser/query/SQLParserFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/queryParser/SelectQueryParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/parser/query/SelectQueryParser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +32,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JUnit4 &amp; Mockito" />
+        <option value="JUnit5 &amp; Mockito" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -38,32 +54,61 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.FileUserAuthenticatorTest.authenticate_ValidCredentials_ReturnsTrue.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.FileUserAuthenticatorTest.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.CreateQueryParser.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.Test.executor": "Run",
+    "JUnit.AESEncryptionTest.executor": "Run",
+    "JUnit.AESEncryptionTest.testDecryptionWithInvalidKey.executor": "Run",
+    "JUnit.AESEncryptionTest.testEncryptionAndDecryption.executor": "Debug",
+    "JUnit.AESEncryptionTest.testEncryptionWithInvalidKey.executor": "Run",
+    "JUnit.DatabaseManagerTest.executor": "Run",
+    "JUnit.DatabaseManagerTest.testCreateDatabase_AlreadyExists.executor": "Run",
+    "JUnit.DatabaseManagerTest.testCreateDatabase_Success.executor": "Run",
+    "JUnit.FileUserAuthenticatorTest.authenticate_ValidCredentials_ReturnsTrue.executor": "Run",
+    "JUnit.FileUserAuthenticatorTest.executor": "Run",
+    "JUnit.TableManagerTest.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="dev.vaibhavsingh.parser.semantic" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/data/user" />
       <recent name="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="dev.vaibhavsingh.dto" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.FileUserAuthenticatorTest">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="CreateQueryParser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dev.vaibhavsingh.parser.query.CreateQueryParser" />
+      <module name="simple-dbms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dev.vaibhavsingh.parser.query.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="dev.vaibhavsingh.Main" />
       <module name="simple-dbms" />
@@ -77,42 +122,56 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FileUserAuthenticatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dev.vaibhavsingh.Test" />
       <module name="simple-dbms" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dev.vaibhavsingh.authentication.*" />
+          <option name="PATTERN" value="dev.vaibhavsingh.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="dev.vaibhavsingh.authentication" />
-      <option name="MAIN_CLASS_NAME" value="dev.vaibhavsingh.authentication.FileUserAuthenticatorTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DatabaseManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="simple-dbms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dev.vaibhavsingh.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dev.vaibhavsingh.data" />
+      <option name="MAIN_CLASS_NAME" value="dev.vaibhavsingh.data.DatabaseManagerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FileUserAuthenticatorTest.authenticate_ValidCredentials_ReturnsTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TableManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="simple-dbms" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dev.vaibhavsingh.authentication.*" />
+          <option name="PATTERN" value="dev.vaibhavsingh.utils.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="dev.vaibhavsingh.authentication" />
-      <option name="MAIN_CLASS_NAME" value="dev.vaibhavsingh.authentication.FileUserAuthenticatorTest" />
-      <option name="METHOD_NAME" value="authenticate_ValidCredentials_ReturnsTrue" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="dev.vaibhavsingh.data" />
+      <option name="MAIN_CLASS_NAME" value="dev.vaibhavsingh.data.TableManagerTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.FileUserAuthenticatorTest" />
-        <item itemvalue="JUnit.FileUserAuthenticatorTest.authenticate_ValidCredentials_ReturnsTrue" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.CreateQueryParser" />
+        <item itemvalue="JUnit.TableManagerTest" />
+        <item itemvalue="JUnit.DatabaseManagerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -135,6 +194,7 @@
       <workItem from="1708213353597" duration="11562000" />
       <workItem from="1708312108739" duration="5830000" />
       <workItem from="1708352925591" duration="706000" />
+      <workItem from="1708402756932" duration="8655000" />
     </task>
     <task id="LOCAL-00001" summary="feat: setup initial&#10;&#10;# 50-character subject line&#10;#&#10;# 72-character wrapped longer description. This should answer:&#10;#&#10;# * Why was this change necessary?&#10;# * How does it address the problem?&#10;# * Are there any side effects?&#10;#&#10;# Include a link to the ticket, if any.&#10;#&#10;# Add co-authors if you worked on this code with others:&#10;#&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;">
       <option name="closed" value="true" />
@@ -224,7 +284,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708399051320</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="refactor: classes and add java docs&#10;&#10;# 50r-character subject line&#10;#&#10;# 72-character wrapped longer description. This should answer:&#10;#&#10;# * Why was this change necessary?&#10;# * How does it address the problem?&#10;# * Are there any side effects?&#10;#&#10;# Include a link to the ticket, if any.&#10;#&#10;# Add co-authors if you worked on this code with others:&#10;#&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;">
+      <option name="closed" value="true" />
+      <created>1708400786295</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1708400786295</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,6 +312,7 @@
     <MESSAGE value="feat: add junit&#10;&#10;# 50-character subject line&#10;#&#10;# 72-character wrapped longer description. This should answer:&#10;#&#10;# * Why was this change necessary?&#10;# * How does it address the problem?&#10;# * Are there any side effects?&#10;#&#10;# Include a link to the ticket, if any.&#10;#&#10;# Add co-authors if you worked on this code with others:&#10;#&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;" />
     <MESSAGE value="test: file user auth&#10;&#10;# 50-character subject line&#10;#&#10;# 72-character wrapped longer description. This should answer:&#10;#&#10;# * Why was this change necessary?&#10;# * How does it address the problem?&#10;# * Are there any side effects?&#10;#&#10;# Include a link to the ticket, if any.&#10;#&#10;# Add co-authors if you worked on this code with others:&#10;#&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;" />
     <MESSAGE value="feat: add data controller&#10;&#10;# 50-character subject line&#10;#&#10;# 72-character wrapped longer description. This should answer:&#10;#&#10;# * Why was this change necessary?&#10;# * How does it address the problem?&#10;# * Are there any side effects?&#10;#&#10;# Include a link to the ticket, if any.&#10;#&#10;# Add co-authors if you worked on this code with others:&#10;#&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add data controller&#10;&#10;# 50-character subject line&#10;#&#10;# 72-character wrapped longer description. This should answer:&#10;#&#10;# * Why was this change necessary?&#10;# * How does it address the problem?&#10;# * Are there any side effects?&#10;#&#10;# Include a link to the ticket, if any.&#10;#&#10;# Add co-authors if you worked on this code with others:&#10;#&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;" />
+    <MESSAGE value="refactor: classes and add java docs&#10;&#10;# 50r-character subject line&#10;#&#10;# 72-character wrapped longer description. This should answer:&#10;#&#10;# * Why was this change necessary?&#10;# * How does it address the problem?&#10;# * Are there any side effects?&#10;#&#10;# Include a link to the ticket, if any.&#10;#&#10;# Add co-authors if you worked on this code with others:&#10;#&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: classes and add java docs&#10;&#10;# 50r-character subject line&#10;#&#10;# 72-character wrapped longer description. This should answer:&#10;#&#10;# * Why was this change necessary?&#10;# * How does it address the problem?&#10;# * Are there any side effects?&#10;#&#10;# Include a link to the ticket, if any.&#10;#&#10;# Add co-authors if you worked on this code with others:&#10;#&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;" />
   </component>
 </project>

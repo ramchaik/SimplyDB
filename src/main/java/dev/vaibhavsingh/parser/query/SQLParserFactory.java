@@ -1,4 +1,4 @@
-package dev.vaibhavsingh.queryParser;
+package dev.vaibhavsingh.parser.query;
 
 public class SQLParserFactory {
     public static SQLParser getParser(String query) {

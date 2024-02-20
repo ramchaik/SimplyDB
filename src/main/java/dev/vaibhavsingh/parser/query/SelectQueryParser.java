@@ -1,4 +1,4 @@
-package dev.vaibhavsingh.queryParser;
+package dev.vaibhavsingh.parser.query;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -28,6 +28,28 @@ public class SelectQueryParser implements SQLParser {
         } else {
             System.out.println("Select query did not match");
             return false;
+        }
+    }
+
+    @Override
+    public String getTableName(String query) {
+        Pattern pattern = Pattern.compile(SELECT_QUERY_REGEX, Pattern.CASE_INSENSITIVE);
+        Matcher matcher = pattern.matcher(query.trim());
+        if (matcher.matches()) {
+            return matcher.group(2);
+        } else {
+            return null;
+        }
+    }
+
+    @Override
+    public String getValues(String query) {
+        Pattern pattern = Pattern.compile(SELECT_QUERY_REGEX, Pattern.CASE_INSENSITIVE);
+        Matcher matcher = pattern.matcher(query.trim());
+        if (matcher.matches()) {
+            return matcher.group(1);
+        } else {
+            return null;
         }
     }
 }

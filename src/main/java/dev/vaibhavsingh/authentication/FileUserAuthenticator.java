@@ -1,6 +1,9 @@
 package dev.vaibhavsingh.authentication;
 
+import dev.vaibhavsingh.constants.DatabaseConstants;
+
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -11,7 +14,9 @@ import java.security.NoSuchAlgorithmException;
  * Authenticates users against a file-based user database.
  */
 public class FileUserAuthenticator implements UserAuthenticator {
-    private static final String USER_FILE = "/Users/lib-user/vaibhav/CSCI5408/Project/Assignment1/simple-dbms/src/main/java/dev/vaibhavsingh/data/admin/user/users.txt";
+    private static final String databaseName = "admin";
+    private static final String tableName = "user";
+    private static final String tableValuesFile = "user_data.txt";
 
     /**
      * Authenticates a user with the given username and password.
@@ -22,7 +27,8 @@ public class FileUserAuthenticator implements UserAuthenticator {
      */
     @Override
     public boolean authenticate(String username, String password) {
-        try (BufferedReader reader = new BufferedReader(new FileReader(USER_FILE))) {
+        String usersTablePath = getUsersTablePath();
+        try (BufferedReader reader = new BufferedReader(new FileReader(usersTablePath))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(":");
@@ -35,6 +41,10 @@ public class FileUserAuthenticator implements UserAuthenticator {
             e.printStackTrace();
         }
         return false;
+    }
+
+    private static String getUsersTablePath() {
+        return DatabaseConstants.DATABASE_ROOT_FOLDER + File.separator + databaseName + File.separator + tableName + File.separator + tableValuesFile;
     }
 
     /**

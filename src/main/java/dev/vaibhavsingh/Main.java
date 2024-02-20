@@ -2,13 +2,17 @@ package dev.vaibhavsingh;
 
 import dev.vaibhavsingh.authentication.*;
 import dev.vaibhavsingh.constants.Constants;
-import dev.vaibhavsingh.queryParser.SQLParser;
-import dev.vaibhavsingh.queryParser.SQLParserFactory;
+import dev.vaibhavsingh.controller.QueryProcessor;
+import dev.vaibhavsingh.data.DatabaseManager;
+import dev.vaibhavsingh.parser.query.CreateQueryParser;
+import dev.vaibhavsingh.parser.query.SQLParser;
+import dev.vaibhavsingh.parser.query.SQLParserFactory;
 
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        DatabaseManager.createDatabase("simplydb");
 
         // Read user input
         Scanner scanner = new Scanner(System.in);
@@ -41,10 +45,14 @@ public class Main {
             SQLParser parser = SQLParserFactory.getParser(query);
             boolean isValid = parser.isValidQuery(query);
 
-            if (isValid) {
-                System.out.println("Query is valid. Executing the query...");
-            } else {
+            if (!isValid) {
                 System.out.println("Invalid query. Please enter a valid SQL query.");
+                System.exit(1);
+            } else {
+                System.out.println("Query is valid. Executing the query...");
+                QueryProcessor processor = new QueryProcessor((CreateQueryParser) parser);
+                processor.process(query);
+                System.out.println("Query executed successfully.");
             }
         }
 

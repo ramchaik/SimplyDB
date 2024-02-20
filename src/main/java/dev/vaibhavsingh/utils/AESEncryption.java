@@ -1,4 +1,4 @@
-package dev.vaibhavsingh.data;
+package dev.vaibhavsingh.utils;
 
 import javax.crypto.*;
 import javax.crypto.spec.SecretKeySpec;

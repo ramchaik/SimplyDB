@@ -1,4 +1,4 @@
-package dev.vaibhavsingh.queryParser;
+package dev.vaibhavsingh.parser.query;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -24,6 +24,28 @@ public class InsertQueryParser implements SQLParser {
             return true; // For now, we'll just return true if the pattern matches
         } else {
             return false;
+        }
+    }
+
+    @Override
+    public String getValues(String query) {
+        Pattern pattern = Pattern.compile(INSERT_QUERY_REGEX, Pattern.CASE_INSENSITIVE);
+        Matcher matcher = pattern.matcher(query.trim());
+        if (matcher.matches()) {
+            return matcher.group(3);
+        } else {
+            return null;
+        }
+    }
+
+    @Override
+    public String getTableName(String query) {
+        Pattern pattern = Pattern.compile(INSERT_QUERY_REGEX, Pattern.CASE_INSENSITIVE);
+        Matcher matcher = pattern.matcher(query.trim());
+        if (matcher.matches()) {
+            return matcher.group(1);
+        } else {
+            return null;
         }
     }
 }

@@ -1,15 +1,10 @@
 package dev.vaibhavsingh.data;
 
 import dev.vaibhavsingh.constants.DatabaseConstants;
+import dev.vaibhavsingh.utils.AESEncryption;
 
-import javax.crypto.BadPaddingException;
-import javax.crypto.IllegalBlockSizeException;
-import javax.crypto.NoSuchPaddingException;
 import java.io.*;
-import java.security.InvalidKeyException;
-import java.security.NoSuchAlgorithmException;
 
-import static dev.vaibhavsingh.constants.DatabaseConstants.DATABASE_ROOT_FOLDER;
 import static dev.vaibhavsingh.constants.DatabaseConstants.DB_SECRET_KEY;
 
 public class TableManager {
@@ -21,16 +16,22 @@ public class TableManager {
      * @param columns      An array of column names.
      * @param columnTypes  An array of column types.
      */
-    public static void createTable(String databaseName, String tableName, String[] columns, String[] columnTypes) {
+    public static boolean createTable(String databaseName, String tableName, String[] columns, String[] columnTypes) {
+        System.out.println("Creating table '" + tableName + "' in database '" + databaseName + "'.");
         String tableFolderPath = getTableFolderPath(databaseName, tableName);
         File tableFolder = new File(tableFolderPath);
         if (!tableFolder.exists()) {
             tableFolder.mkdirs();
+        } else {
+            throw new IllegalArgumentException("Table '" + tableName + "' already exists.");
         }
         String metadataFilePath = tableFolderPath + File.separator + DatabaseConstants.TABLE_METADATA_FILE;
+        System.out.println("Creating meta data table '" + tableName + "' in database '" + databaseName + "'.");
         createTableMetadataFile(metadataFilePath, tableName, columns, columnTypes);
         String databaseMetadataFilePath = getTableFolderPath(databaseName, DatabaseConstants.TABLE_METADATA_FILE);
         updateDatabaseMetadataFile(databaseMetadataFilePath, tableName, tableFolderPath);
+        System.out.println("Table '" + tableName + "' created successfully in database '" + databaseName + "'.");
+        return true;
     }
 
     /**
@@ -50,11 +51,16 @@ public class TableManager {
         String tableDataFilePath = getTableDataFilePath(tableName, tableFolderPath);
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(tableDataFilePath, true))) {
             for (String value : values) {
-                writer.write(value + ",");
+                if (DatabaseConstants.isEncryptionEnabled) {
+                    String encryptedValue = AESEncryption.encrypt(value, DB_SECRET_KEY);
+                    writer.write(encryptedValue + ",");
+                } else {
+                    writer.write(value + ",");
+                }
             }
             writer.newLine();
             System.out.println("Values inserted into table '" + tableName + "' in database '" + databaseName + "' successfully.");
-        } catch (IOException e) {
+        } catch (IOException | AESEncryption.EncryptionException e) {
             System.out.println("An error occurred while inserting values into table: " + e.getMessage());
         }
     }
@@ -70,10 +76,22 @@ public class TableManager {
         try (BufferedReader reader = new BufferedReader(new FileReader(tableDataFilePath))) {
             String line;
             while ((line = reader.readLine()) != null) {
-                System.out.println(line);
+                // Decrypt and log the values
+                String[] values = line.split(",");
+                for (String value : values) {
+                    if (DatabaseConstants.isEncryptionEnabled) {
+                        String decryptedValue = AESEncryption.decrypt(value, DB_SECRET_KEY);
+                        System.out.print(decryptedValue + "\t");
+                    } else {
+                        System.out.print(value + "\t");
+                    }
+                }
+                System.out.println();
             }
         } catch (IOException e) {
             System.out.println("An error occurred while reading table data: " + e.getMessage());
+        } catch (AESEncryption.EncryptionException e) {
+            throw new RuntimeException(e);
         }
     }
 
@@ -101,7 +119,7 @@ public class TableManager {
     }
 
     private static String getTableFolderPath(String databaseName, String tableName) {
-        return DATABASE_ROOT_FOLDER + File.separator + databaseName + File.separator + tableName;
+        return DatabaseConstants.DATABASE_ROOT_FOLDER + File.separator + databaseName + File.separator + tableName;
     }
 
     private static String getTableDataFilePath(String tableName, String tableFolderPath) {
