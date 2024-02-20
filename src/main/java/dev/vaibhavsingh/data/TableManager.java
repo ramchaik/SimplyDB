@@ -4,10 +4,14 @@ import dev.vaibhavsingh.constants.DatabaseConstants;
 import dev.vaibhavsingh.utils.AESEncryption;
 
 import java.io.*;
+import java.nio.channels.FileChannel;
+import java.nio.channels.FileLock;
 
 import static dev.vaibhavsingh.constants.DatabaseConstants.DB_SECRET_KEY;
 
 public class TableManager {
+    private static FileLock tableFileLock;
+
     /**
      * Creates a new table with the specified name and columns.
      *
@@ -124,5 +128,37 @@ public class TableManager {
 
     private static String getTableDataFilePath(String tableName, String tableFolderPath) {
         return tableFolderPath + File.separator + tableName + DatabaseConstants.TABLE_DATA_FILE;
+    }
+
+    /**
+     * Locks a table file.
+     *
+     * @param file The table file to lock.
+     * @return The file lock if successful, null otherwise.
+     */
+    public static FileLock lockTable(File file) {
+        try {
+            RandomAccessFile raf = new RandomAccessFile(file, "rw");
+            FileChannel channel = raf.getChannel();
+            tableFileLock = channel.lock(); // Locks the entire file
+            return tableFileLock;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    /**
+     * Release gable lock.
+     */
+    public static void releaseTable() {
+        FileLock lock = tableFileLock;
+        if (lock != null && lock.isValid()) {
+            try {
+                lock.release(); // Releases the lock
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }
