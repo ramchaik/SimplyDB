@@ -13,72 +13,66 @@ import static dev.vaibhavsingh.constants.DatabaseConstants.DATABASE_ROOT_FOLDER;
 import static dev.vaibhavsingh.constants.DatabaseConstants.DB_SECRET_KEY;
 
 public class TableManager {
-    public static void create(String databaseName, String tableName, String[] columns, String[] columnTypes) {
-        // Create the table folder within the database folder
+    /**
+     * Creates a new table with the specified name and columns.
+     *
+     * @param databaseName The name of the database containing the table.
+     * @param tableName    The name of the table to create.
+     * @param columns      An array of column names.
+     * @param columnTypes  An array of column types.
+     */
+    public static void createTable(String databaseName, String tableName, String[] columns, String[] columnTypes) {
         String tableFolderPath = getTableFolderPath(databaseName, tableName);
         File tableFolder = new File(tableFolderPath);
         if (!tableFolder.exists()) {
             tableFolder.mkdirs();
         }
-
-        // Create the table metadata file
         String metadataFilePath = tableFolderPath + File.separator + DatabaseConstants.TABLE_METADATA_FILE;
         createTableMetadataFile(metadataFilePath, tableName, columns, columnTypes);
-
-        // Update the database metadata file with table details
         String databaseMetadataFilePath = getTableFolderPath(databaseName, DatabaseConstants.TABLE_METADATA_FILE);
         updateDatabaseMetadataFile(databaseMetadataFilePath, tableName, tableFolderPath);
     }
 
-    public static void insert(String databaseName, String tableName, String[] values) {
+    /**
+     * Inserts values into the specified table.
+     *
+     * @param databaseName The name of the database containing the table.
+     * @param tableName    The name of the table to insert values into.
+     * @param values       An array of values to insert.
+     */
+    public static void insertIntoTable(String databaseName, String tableName, String[] values) {
         String tableFolderPath = getTableFolderPath(databaseName, tableName);
         File tableFolder = new File(tableFolderPath);
-
         if (!tableFolder.exists() || !tableFolder.isDirectory()) {
             System.out.println("Table '" + tableName + "' not found.");
             return;
         }
-
         String tableDataFilePath = getTableDataFilePath(tableName, tableFolderPath);
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(tableDataFilePath, true))) {
-            // Encrypt and write values to the file
             for (String value : values) {
-                // TODO: add encryption flag on db metadata file; use that to enable/disable encryption
-                String encryptedValue = Encryption.encrypt(value, DB_SECRET_KEY);
-                writer.write(encryptedValue + ",");
+                writer.write(value + ",");
             }
             writer.newLine();
             System.out.println("Values inserted into table '" + tableName + "' in database '" + databaseName + "' successfully.");
-        } catch (IOException | NoSuchPaddingException | NoSuchAlgorithmException | InvalidKeyException |
-                 BadPaddingException | IllegalBlockSizeException e) {
+        } catch (IOException e) {
             System.out.println("An error occurred while inserting values into table: " + e.getMessage());
         }
     }
 
-    public static void read(String databaseName, String tableName) {
-        String tableFolderPath = getTableFolderPath(databaseName, tableName);
-        File tableFolder = new File(tableFolderPath);
-
-        if (!tableFolder.exists() || !tableFolder.isDirectory()) {
-            System.out.println("Table '" + tableName + "' not found.");
-            return;
-        }
-
-        String tableDataFilePath = getTableDataFilePath(tableName, tableFolderPath);
+    /**
+     * Reads values from the specified table.
+     *
+     * @param databaseName The name of the database containing the table.
+     * @param tableName    The name of the table to read.
+     */
+    public static void readTable(String databaseName, String tableName) {
+        String tableDataFilePath = getTableDataFilePath(tableName, getTableFolderPath(databaseName, tableName));
         try (BufferedReader reader = new BufferedReader(new FileReader(tableDataFilePath))) {
             String line;
             while ((line = reader.readLine()) != null) {
-                // Decrypt and log the values
-                String[] encryptedValues = line.split(",");
-                for (String encryptedValue : encryptedValues) {
-                    // TODO: add flag on db metadata file to check if encryption is enabled
-                    String decryptedValue = Encryption.decrypt(encryptedValue, DatabaseConstants.DB_SECRET_KEY);
-                    System.out.print(decryptedValue + "\t");
-                }
-                System.out.println();
+                System.out.println(line);
             }
-        } catch (IOException | NoSuchPaddingException | NoSuchAlgorithmException | InvalidKeyException |
-                 BadPaddingException | IllegalBlockSizeException e) {
+        } catch (IOException e) {
             System.out.println("An error occurred while reading table data: " + e.getMessage());
         }
     }
@@ -87,7 +81,7 @@ public class TableManager {
         try (FileWriter writer = new FileWriter(metadataFilePath)) {
             writer.write("TableName:" + tableName + "\n");
             writer.write("TablePath:" + metadataFilePath + "\n");
-            writer.write("Columns:"+ columns.length +"\n");
+            writer.write("Columns:" + columns.length + "\n");
             for (int i = 0; i < columns.length; i++) {
                 writer.write(columns[i] + ":" + columnTypes[i] + "\n");
             }
