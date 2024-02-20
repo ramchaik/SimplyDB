@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4a802b0-ade9-4112-8627-82f4f89071d5" name="Changes" comment="test: file user auth&#10;&#10;# 50-character subject line&#10;#&#10;# 72-character wrapped longer description. This should answer:&#10;#&#10;# * Why was this change necessary?&#10;# * How does it address the problem?&#10;# * Are there any side effects?&#10;#&#10;# Include a link to the ticket, if any.&#10;#&#10;# Add co-authors if you worked on this code with others:&#10;#&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/queryParser/CreateQueryParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/queryParser/CreateQueryParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/queryParser/InsertQueryParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/queryParser/InsertQueryParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/queryParser/SelectQueryParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/queryParser/SelectQueryParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/data/admin/user/users.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,25 +37,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "JUnit.FileUserAuthenticatorTest.authenticate_ValidCredentials_ReturnsTrue.executor": "Run",
-    "JUnit.FileUserAuthenticatorTest.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FileUserAuthenticatorTest.authenticate_ValidCredentials_ReturnsTrue.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FileUserAuthenticatorTest.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/data/user" />
