@@ -1,6 +1,6 @@
 package dev.vaibhavsingh.controller;
 
-import dev.vaibhavsingh.dto.response.ParsedSQLResponse;
+import dev.vaibhavsingh.dto.ParsedSQLQuery;
 import dev.vaibhavsingh.parser.query.CreateQueryParser;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -24,7 +24,7 @@ class QueryProcessorTest {
 
     @Test
     void testProcess() {
-        when(parser.parse(anyString())).thenReturn(new ParsedSQLResponse());
+        when(parser.parse(anyString())).thenReturn(new ParsedSQLQuery());
 
         boolean result = queryProcessor.process("query");
         Assertions.assertEquals(true, result);

@@ -1,7 +1,7 @@
 package dev.vaibhavsingh.parser.query;
 
-import dev.vaibhavsingh.dto.ParsedCreateColumn;
-import dev.vaibhavsingh.dto.response.ParsedSQLResponse;
+import dev.vaibhavsingh.dto.ParsedColumn;
+import dev.vaibhavsingh.dto.ParsedSQLQuery;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -47,18 +47,7 @@ public class CreateQueryParser implements SQLParser {
     public boolean isValidQuery(String query) {
         Pattern pattern = Pattern.compile(CREATE_TABLE_REGEX, Pattern.CASE_INSENSITIVE);
         Matcher matcher = pattern.matcher(query.trim());
-        if (matcher.matches()) {
-            String tableName = matcher.group(1);
-            String columns = matcher.group(2);
-
-            // perform further validation on table name and columns
-            System.out.println("Table Name: " + tableName);
-            System.out.println("Columns: " + columns);
-
-            return true; // For now, we'll just return true if the pattern matches
-        } else {
-            return false;
-        }
+        return matcher.matches();
     }
 
     /**
@@ -92,12 +81,13 @@ public class CreateQueryParser implements SQLParser {
     }
 
     /**
-     * This method parses the given query and returns a ParsedSQLResponse object
+     * This method parses the given query and returns a ParsedSQLQuery object
      * @param query SQL query
      * @return parsed SQL response
      */
-    public ParsedSQLResponse parse(String query) {
-        ArrayList<ParsedCreateColumn> columnList = new ArrayList<>();
+    @Override
+    public ParsedSQLQuery parse(String query) {
+        ArrayList<ParsedColumn> columnList = new ArrayList<>();
 
         String tableName = getTableName(query);
         String columns = getValues(query);
@@ -114,17 +104,17 @@ public class CreateQueryParser implements SQLParser {
                 throw new IllegalArgumentException("Invalid SQL data type: " + columnType);
             }
 
-            ParsedCreateColumn columnObj = new ParsedCreateColumn(columnName, columnType);
+            ParsedColumn columnObj = new ParsedColumn(columnName, columnType, null);
 
             columnList.add(columnObj);
         }
 
-        ParsedSQLResponse response = new ParsedSQLResponse();
+        ParsedSQLQuery parsedSQLQuery = new ParsedSQLQuery();
 
-        response.tableName = tableName;
-        response.columns = columnList;
+        parsedSQLQuery.tableName = tableName;
+        parsedSQLQuery.columns = columnList;
 
-        return response;
+        return parsedSQLQuery;
     }
 
     /**

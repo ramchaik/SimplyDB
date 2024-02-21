@@ -1,7 +1,7 @@
 package dev.vaibhavsingh.controller;
 
 import dev.vaibhavsingh.data.TableManager;
-import dev.vaibhavsingh.dto.response.ParsedSQLResponse;
+import dev.vaibhavsingh.dto.ParsedSQLQuery;
 import dev.vaibhavsingh.parser.query.CreateQueryParser;
 
 import static dev.vaibhavsingh.constants.DatabaseConstants.DATABASE_NAME;
@@ -14,7 +14,7 @@ public class QueryProcessor {
     // takes string input and returns boolean true if successful else false
     public boolean process(String query) {
         // parse the query using the SQLParserFactory
-        ParsedSQLResponse parsedCreateColumn = parser.parse(query);
+        ParsedSQLQuery parsedCreateColumn = parser.parse(query);
 
         String[] columns = parsedCreateColumn.columns.stream().map(column -> column.name).toArray(String[]::new);
         String[] columnTypes = parsedCreateColumn.columns.stream().map(column -> column.type).toArray(String[]::new);

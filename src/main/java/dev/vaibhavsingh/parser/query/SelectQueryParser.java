@@ -1,5 +1,9 @@
 package dev.vaibhavsingh.parser.query;
 
+import dev.vaibhavsingh.dto.ParsedColumn;
+import dev.vaibhavsingh.dto.ParsedSQLQuery;
+
+import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -12,23 +16,7 @@ public class SelectQueryParser implements SQLParser {
         System.out.println("Validating SELECT query");
         Pattern pattern = Pattern.compile(SELECT_QUERY_REGEX, Pattern.CASE_INSENSITIVE);
         Matcher matcher = pattern.matcher(query.trim());
-        if (matcher.matches()) {
-            System.out.println("Select query matched");
-            String columns = matcher.group(1);
-            System.out.println("Columns: " + columns);
-            String tableName = matcher.group(2);
-            String whereClause = matcher.group(4); // Optional WHERE clause
-
-            // perform further validation on columns, table name, and where clause
-            System.out.println("Columns: " + columns);
-            System.out.println("Table Name: " + tableName);
-            System.out.println("Where Clause: " + whereClause);
-
-            return true; // For now, we'll just return true if the pattern matches
-        } else {
-            System.out.println("Select query did not match");
-            return false;
-        }
+        return matcher.matches();
     }
 
     @Override
@@ -48,6 +36,37 @@ public class SelectQueryParser implements SQLParser {
         Matcher matcher = pattern.matcher(query.trim());
         if (matcher.matches()) {
             return matcher.group(1);
+        } else {
+            return null;
+        }
+    }
+
+    @Override
+    public ParsedSQLQuery parse(String query) {
+        ArrayList<ParsedColumn> columnList = new ArrayList<>();
+
+        System.out.println("Parsing SELECT query");
+        Pattern pattern = Pattern.compile(SELECT_QUERY_REGEX, Pattern.CASE_INSENSITIVE);
+        Matcher matcher = pattern.matcher(query.trim());
+
+        if (matcher.matches()) {
+            String columns = matcher.group(1);
+            String tableName = matcher.group(2);
+
+            // Optional WHERE clause; should we handle this?
+            String whereClause = matcher.group(4);
+
+           for (String column : columns.split(",")) {
+                ParsedColumn parsedColumn = new ParsedColumn(column, null, null);
+                columnList.add(parsedColumn);
+            }
+
+            ParsedSQLQuery parsedQuery = new ParsedSQLQuery();
+
+            parsedQuery.tableName = tableName;
+            parsedQuery.columns = columnList;
+
+            return parsedQuery;
         } else {
             return null;
         }
