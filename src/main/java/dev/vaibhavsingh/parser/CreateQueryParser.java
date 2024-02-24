@@ -1,4 +1,4 @@
-package dev.vaibhavsingh.parser.query;
+package dev.vaibhavsingh.parser;
 
 import dev.vaibhavsingh.dto.ParsedColumn;
 import dev.vaibhavsingh.dto.ParsedSQLQuery;
@@ -19,23 +19,23 @@ public class CreateQueryParser implements SQLParser {
         // Add valid SQL data types to the set
         VALID_SQL_DATA_TYPES.add("int");
         VALID_SQL_DATA_TYPES.add("integer");
-        VALID_SQL_DATA_TYPES.add("smallint");
-        VALID_SQL_DATA_TYPES.add("bigint");
-        VALID_SQL_DATA_TYPES.add("float");
         VALID_SQL_DATA_TYPES.add("double");
-        VALID_SQL_DATA_TYPES.add("decimal");
-        VALID_SQL_DATA_TYPES.add("numeric");
-        VALID_SQL_DATA_TYPES.add("real");
         VALID_SQL_DATA_TYPES.add("date");
         VALID_SQL_DATA_TYPES.add("time");
         VALID_SQL_DATA_TYPES.add("datetime");
         VALID_SQL_DATA_TYPES.add("timestamp");
         VALID_SQL_DATA_TYPES.add("char");
         VALID_SQL_DATA_TYPES.add("varchar");
-        VALID_SQL_DATA_TYPES.add("nvarchar");
         VALID_SQL_DATA_TYPES.add("text");
-        VALID_SQL_DATA_TYPES.add("blob");
-        VALID_SQL_DATA_TYPES.add("clob");
+    }
+
+    /**
+     * This method returns the type of the SQL query
+     * @return type of the SQL query
+     */
+    @Override
+    public String getQueryType() {
+        return "CREATE";
     }
 
     /**
@@ -91,6 +91,12 @@ public class CreateQueryParser implements SQLParser {
 
         String tableName = getTableName(query);
         String columns = getValues(query);
+
+        if (tableName == null || columns == null) {
+            System.out.println("Table Name" + tableName);
+            System.out.println("Columns" + columns);
+            throw new IllegalArgumentException("Invalid CREATE TABLE query: " + query);
+        }
 
         String[] columnArray = columns.split(",");
         for (String column : columnArray) {

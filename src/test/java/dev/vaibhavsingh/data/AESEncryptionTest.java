@@ -1,6 +1,5 @@
 package dev.vaibhavsingh.data;
 
-import dev.vaibhavsingh.utils.AESEncryption;
 import org.junit.jupiter.api.Test;
 
 import javax.crypto.BadPaddingException;

@@ -41,13 +41,13 @@ public class UserAuthenticatorManager {
         if (userInputCaptcha.equals(captchaCode)) {
             // Check username and password
             if (userAuthenticator.authenticate(username, password)) {
-                System.out.println("Authentication successful!");
+                System.out.println("Login successful!");
             } else {
-                System.out.println("Authentication failed: Invalid username or password.");
+                System.out.println("Login failed: Invalid username or password.");
                 System.exit(1);
             }
         } else {
-            System.out.println("CAPTCHA validation failed. Authentication failed!");
+            System.out.println("CAPTCHA validation failed. Login failed!");
             System.exit(1);
         }
     }

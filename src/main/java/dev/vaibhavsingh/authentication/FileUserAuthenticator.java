@@ -15,8 +15,9 @@ import java.security.NoSuchAlgorithmException;
  */
 public class FileUserAuthenticator implements UserAuthenticator {
     private static final String databaseName = "admin";
-    private static final String tableName = "user";
-    private static final String tableValuesFile = "user_data.txt";
+    private static final String tableName = "users";
+    private static final String tableValuesFile = "users_data.txt";
+    private static final String DELIMITER = ":";
 
     /**
      * Authenticates a user with the given username and password.
@@ -31,7 +32,7 @@ public class FileUserAuthenticator implements UserAuthenticator {
         try (BufferedReader reader = new BufferedReader(new FileReader(usersTablePath))) {
             String line;
             while ((line = reader.readLine()) != null) {
-                String[] parts = line.split(":");
+                String[] parts = line.split(DELIMITER);
                 if (parts.length == 2 && parts[0].equals(username)) {
                     String hashedPassword = hashPassword(password);
                     return hashedPassword.equals(parts[1]);
@@ -53,7 +54,7 @@ public class FileUserAuthenticator implements UserAuthenticator {
      * @param password The password to hash.
      * @return The hashed password.
      */
-    private String hashPassword(String password) {
+    public String hashPassword(String password) {
         try {
             MessageDigest digest = MessageDigest.getInstance("SHA-256");
             byte[] hashBytes = digest.digest(password.getBytes(StandardCharsets.UTF_8));

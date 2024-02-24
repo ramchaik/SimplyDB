@@ -11,6 +11,12 @@ import java.util.Scanner;
  * This class manages database operations such as creation and reading.
  */
 public class DatabaseManager {
+    public static String currentDatabase;
+
+    public static void setCurrentDatabase(String currentDatabase) {
+        DatabaseManager.currentDatabase = currentDatabase;
+    }
+
     /**
      * Creates a new database with the specified name.
      *
@@ -48,7 +54,6 @@ public class DatabaseManager {
             System.out.println("Database '" + subfolderPath + "' created successfully.");
         } else {
             System.out.println("Database '" + subfolderPath + "' already exists.");
-            System.exit(1);
         }
     }
 

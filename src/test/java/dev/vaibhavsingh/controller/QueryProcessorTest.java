@@ -1,7 +1,8 @@
 package dev.vaibhavsingh.controller;
 
 import dev.vaibhavsingh.dto.ParsedSQLQuery;
-import dev.vaibhavsingh.parser.query.CreateQueryParser;
+import dev.vaibhavsingh.parser.CreateQueryParser;
+import dev.vaibhavsingh.processor.CreateQueryProcessor;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -15,7 +16,7 @@ class QueryProcessorTest {
     @Mock
     CreateQueryParser parser;
     @InjectMocks
-    QueryProcessor queryProcessor;
+    CreateQueryProcessor queryProcessor;
 
     @BeforeEach
     void setUp() {

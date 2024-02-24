@@ -1,4 +1,4 @@
-package dev.vaibhavsingh.parser.query;
+package dev.vaibhavsingh.parser;
 
 import dev.vaibhavsingh.dto.ParsedColumn;
 import dev.vaibhavsingh.dto.ParsedSQLQuery;
@@ -10,6 +10,15 @@ import java.util.regex.Pattern;
 public class InsertQueryParser implements SQLParser {
     // Regular expression to match INSERT INTO query pattern
     private static final String INSERT_QUERY_REGEX = "^\\s*INSERT\\s+INTO\\s+(\\w+)\\s*\\((.+)\\)\\s*VALUES\\s*\\((.+)\\);?$";
+
+    /**
+     * This method returns the type of the SQL query
+     * @return type of the SQL query
+     */
+    @Override
+    public String getQueryType() {
+        return "INSERT";
+    }
 
     @Override
     public boolean isValidQuery(String query) {

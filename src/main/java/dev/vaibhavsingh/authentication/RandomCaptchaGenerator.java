@@ -11,7 +11,7 @@ public class RandomCaptchaGenerator implements CaptchaGenerator {
         // Define the characters to use for the CAPTCHA code
         String allowedChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
-        // Set the length of the CAPTCHA code
+        // Length of the CAPTCHA code
         int captchaLength = 6;
 
         // Generate the random CAPTCHA code
