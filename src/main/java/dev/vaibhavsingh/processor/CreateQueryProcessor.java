@@ -1,7 +1,7 @@
 package dev.vaibhavsingh.processor;
 
 import dev.vaibhavsingh.data.TableManager;
-import dev.vaibhavsingh.dto.ParsedSQLQuery;
+import dev.vaibhavsingh.dao.ParsedSQLQuery;
 import dev.vaibhavsingh.parser.SQLParser;
 
 import static dev.vaibhavsingh.constants.DatabaseConstants.DATABASE_NAME;

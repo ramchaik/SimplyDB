@@ -1,4 +1,4 @@
-package dev.vaibhavsingh.dto;
+package dev.vaibhavsingh.dao;
 
 public class ParsedColumn {
     public String name;

@@ -1,6 +1,6 @@
 package dev.vaibhavsingh.parser;
 
-import dev.vaibhavsingh.dto.ParsedSQLQuery;
+import dev.vaibhavsingh.dao.ParsedSQLQuery;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

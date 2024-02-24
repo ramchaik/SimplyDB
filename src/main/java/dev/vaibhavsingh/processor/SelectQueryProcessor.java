@@ -2,8 +2,8 @@ package dev.vaibhavsingh.processor;
 
 import dev.vaibhavsingh.data.DatabaseManager;
 import dev.vaibhavsingh.data.TableManager;
-import dev.vaibhavsingh.dto.ParsedColumn;
-import dev.vaibhavsingh.dto.ParsedSQLQuery;
+import dev.vaibhavsingh.dao.ParsedColumn;
+import dev.vaibhavsingh.dao.ParsedSQLQuery;
 import dev.vaibhavsingh.parser.SQLParser;
 import dev.vaibhavsingh.parser.SelectQueryParser;
 

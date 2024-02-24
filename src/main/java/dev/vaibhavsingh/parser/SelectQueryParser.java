@@ -1,7 +1,7 @@
 package dev.vaibhavsingh.parser;
 
-import dev.vaibhavsingh.dto.ParsedColumn;
-import dev.vaibhavsingh.dto.ParsedSQLQuery;
+import dev.vaibhavsingh.dao.ParsedColumn;
+import dev.vaibhavsingh.dao.ParsedSQLQuery;
 
 import java.util.ArrayList;
 import java.util.regex.Matcher;

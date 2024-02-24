@@ -1,6 +1,6 @@
 package dev.vaibhavsingh.parser;
 
-import dev.vaibhavsingh.dto.ParsedSQLQuery;
+import dev.vaibhavsingh.dao.ParsedSQLQuery;
 
 public interface SQLParser {
     String getQueryType();

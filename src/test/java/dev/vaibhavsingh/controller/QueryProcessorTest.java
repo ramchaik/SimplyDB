@@ -1,6 +1,6 @@
 package dev.vaibhavsingh.controller;
 
-import dev.vaibhavsingh.dto.ParsedSQLQuery;
+import dev.vaibhavsingh.dao.ParsedSQLQuery;
 import dev.vaibhavsingh.parser.CreateQueryParser;
 import dev.vaibhavsingh.processor.CreateQueryProcessor;
 import org.junit.jupiter.api.Assertions;

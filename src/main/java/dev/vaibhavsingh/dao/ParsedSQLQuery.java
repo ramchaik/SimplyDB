@@ -1,4 +1,4 @@
-package dev.vaibhavsingh.dto;
+package dev.vaibhavsingh.dao;
 
 import java.util.ArrayList;
 
