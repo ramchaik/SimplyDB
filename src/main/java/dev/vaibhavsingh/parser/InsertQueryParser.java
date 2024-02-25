@@ -8,7 +8,9 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class InsertQueryParser implements SQLParser {
-    // Regular expression to match INSERT INTO query pattern
+    /**
+     * Regular expression to match INSERT INTO query pattern
+     */
     private static final String INSERT_QUERY_REGEX = "^\\s*INSERT\\s+INTO\\s+(\\w+)\\s*\\((.+)\\)\\s*VALUES\\s*\\((.+)\\);?$";
 
     /**
@@ -20,6 +22,11 @@ public class InsertQueryParser implements SQLParser {
         return "INSERT";
     }
 
+    /**
+     * This method checks if the given query is a valid INSERT INTO query
+     * @param query SQL query
+     * @return true if the query is valid, false otherwise
+     */
     @Override
     public boolean isValidQuery(String query) {
         Pattern pattern = Pattern.compile(INSERT_QUERY_REGEX, Pattern.CASE_INSENSITIVE);
@@ -27,6 +34,11 @@ public class InsertQueryParser implements SQLParser {
         return matcher.matches();
     }
 
+    /**
+     * Returns the values from the query
+     * @param query the query to be parsed
+     * @return the values from the query
+     */
     @Override
     public String getValues(String query) {
         Pattern pattern = Pattern.compile(INSERT_QUERY_REGEX, Pattern.CASE_INSENSITIVE);
@@ -38,7 +50,11 @@ public class InsertQueryParser implements SQLParser {
         }
     }
 
-    // get columns from query
+    /**
+     * get columns from query
+     * @param query SQL query
+     * @return columns
+     */
     public String getColumns(String query) {
         Pattern pattern = Pattern.compile(INSERT_QUERY_REGEX, Pattern.CASE_INSENSITIVE);
         Matcher matcher = pattern.matcher(query.trim());
@@ -49,6 +65,11 @@ public class InsertQueryParser implements SQLParser {
         }
     }
 
+    /**
+     * get table name from query
+     * @param query SQL query
+     * @return table name
+     */
     @Override
     public String getTableName(String query) {
         Pattern pattern = Pattern.compile(INSERT_QUERY_REGEX, Pattern.CASE_INSENSITIVE);

@@ -6,7 +6,13 @@ import java.util.Scanner;
  * Handles user authentication.
  */
 public class UserAuthenticatorManager {
+    /**
+     * UserAuthenticator instance to handle user authentication.
+     */
     private final UserAuthenticator userAuthenticator;
+    /**
+     * CaptchaGenerator instance to generate CAPTCHA codes.
+     */
     private final CaptchaGenerator captchaGenerator;
 
     /**

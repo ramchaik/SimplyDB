@@ -130,6 +130,14 @@ public class TableManager {
         return columns;
     }
 
+    /**
+     * Creates a metadata file for the specified table.
+     *
+     * @param metadataFilePath The path to the table metadata file.
+     * @param tableName        The name of the table.
+     * @param columns          An array of column names.
+     * @param columnTypes      An array of column types.
+     */
     private static void createTableMetadataFile(String metadataFilePath, String tableName, String[] columns, String[] columnTypes) {
         try (
                 FileChannel channel = FileChannel.open(Paths.get(metadataFilePath), StandardOpenOption.WRITE, StandardOpenOption.CREATE);
@@ -149,6 +157,13 @@ public class TableManager {
         }
     }
 
+    /**
+     * Updates the database metadata file with the specified table.
+     *
+     * @param metadataFilePath The path to the database metadata file.
+     * @param tableName        The name of the table to update.
+     * @param tableFolderPath  The path to the folder containing the table.
+     */
     private static void updateDatabaseMetadataFile(String metadataFilePath, String tableName, String tableFolderPath) {
         try (
                 FileChannel channel = FileChannel.open(Paths.get(metadataFilePath), StandardOpenOption.WRITE, StandardOpenOption.CREATE);
@@ -163,7 +178,13 @@ public class TableManager {
         }
     }
 
-    // read values from metadata file and return as a string
+    /**
+     * Reads the metadata of the specified table.
+     *
+     * @param databaseName The name of the database containing the table.
+     * @param tableName    The name of the table to read.
+     * @return The metadata of the table.
+     */
     public static String readTableMetadata(String databaseName, String tableName) {
         String tableFolderPath = getTableFolderPath(databaseName, tableName);
         String metadataFilePath = tableFolderPath + File.separator + DatabaseConstants.TABLE_METADATA_FILE;
@@ -179,6 +200,13 @@ public class TableManager {
         return metadata.toString();
     }
 
+    /**
+     * Returns the columns of the specified table.
+     *
+     * @param databaseName The name of the database containing the table.
+     * @param tableName    The name of the table.
+     * @return An array of column names.
+     */
     public static ArrayList<String> getTableColumns(String databaseName, String tableName) {
         String tableFolderPath = getTableFolderPath(databaseName, tableName);
         String metadataFilePath = tableFolderPath + File.separator + DatabaseConstants.TABLE_METADATA_FILE;
@@ -204,7 +232,14 @@ public class TableManager {
     }
 
 
-    // get column index from the metadata file
+    /**
+     * Returns the index of the specified column in the table.
+     *
+     * @param databaseName The name of the database containing the table.
+     * @param tableName    The name of the table.
+     * @param columnName   The name of the column.
+     * @return The index of the column in the table.
+     */
     public static int getColumnIndex(String databaseName, String tableName, String columnName) {
         String tableFolderPath = getTableFolderPath(databaseName, tableName);
         String metadataFilePath = tableFolderPath + File.separator + DatabaseConstants.TABLE_METADATA_FILE;
@@ -231,10 +266,24 @@ public class TableManager {
         return columnIndex;
     }
 
+    /**
+     * Returns the path to the folder containing the specified table.
+     *
+     * @param databaseName The name of the database containing the table.
+     * @param tableName    The name of the table.
+     * @return The path to the folder containing the table.
+     */
     private static String getTableFolderPath(String databaseName, String tableName) {
         return DatabaseConstants.DATABASE_ROOT_FOLDER + File.separator + databaseName + File.separator + tableName;
     }
 
+    /**
+     * Returns the path to the table data file.
+     *
+     * @param tableName       The name of the table.
+     * @param tableFolderPath The path to the folder containing the table.
+     * @return The path to the table data file.
+     */
     private static String getTableDataFilePath(String tableName, String tableFolderPath) {
         return tableFolderPath + File.separator + tableName + DatabaseConstants.TABLE_DATA_FILE;
     }
@@ -281,6 +330,33 @@ public class TableManager {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+        }
+    }
+
+    /**
+     * Deletes the specified table from the specified database.
+     *
+     * @param databaseName The name of the database containing the table.
+     * @param tableName    The name of the table to delete.
+     */
+    public static boolean updateTable(String databaseName, String tableName, ArrayList<String> valuesFromTable) {
+        String tableFolderPath = getTableFolderPath(databaseName, tableName);
+        String tableDataFilePath = getTableDataFilePath(tableName, tableFolderPath);
+        try (
+                FileChannel channel = FileChannel.open(Paths.get(tableDataFilePath), StandardOpenOption.WRITE, StandardOpenOption.CREATE);
+                FileLock lock = channel.lock();
+                FileWriter fileWriter = new FileWriter(tableDataFilePath, false);
+                BufferedWriter writer = new BufferedWriter(fileWriter)
+        ) {
+            for (String value : valuesFromTable) {
+                writer.write(value);
+                writer.newLine();
+            }
+            System.out.println("Table updated successfully.");
+            return true;
+        } catch (IOException e) {
+            System.out.println("An error occurred while updating table: " + e.getMessage());
+            return false;
         }
     }
 }

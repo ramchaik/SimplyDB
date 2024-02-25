@@ -4,7 +4,8 @@ import dev.vaibhavsingh.dao.ParsedSQLQuery;
 
 public class TransactionParser implements SQLParser {
     /**
-     * @return
+     * Returns the type of the query
+     * @return the type of the query
      */
     @Override
     public String getQueryType() {
@@ -12,8 +13,9 @@ public class TransactionParser implements SQLParser {
     }
 
     /**
-     * @param query
-     * @return
+     * Validates the query
+     * @param query the query to be validated
+     * @return true if the query is valid, false otherwise
      */
     @Override
     public boolean isValidQuery(String query) {
@@ -21,8 +23,9 @@ public class TransactionParser implements SQLParser {
     }
 
     /**
-     * @param query
-     * @return
+     * Returns the table name from the query
+     * @param query the query to be parsed
+     * @return the table name
      */
     @Override
     public String getTableName(String query) {
@@ -30,8 +33,9 @@ public class TransactionParser implements SQLParser {
     }
 
     /**
-     * @param query
-     * @return
+     * Returns the values from the query
+     * @param query the query to be parsed
+     * @return the values from the query
      */
     @Override
     public String getValues(String query) {
@@ -39,8 +43,9 @@ public class TransactionParser implements SQLParser {
     }
 
     /**
-     * @param query
-     * @return
+     * Returns the conditions from the query
+     * @param query the query to be parsed
+     * @return the conditions from the query
      */
     @Override
     public ParsedSQLQuery parse(String query) {

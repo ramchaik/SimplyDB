@@ -15,6 +15,9 @@ public class CreateQueryParser implements SQLParser {
 
     private static final Set<String> VALID_SQL_DATA_TYPES = new HashSet<>();
 
+    /**
+     * This block adds valid SQL data types to the set
+     */
     static {
         // Add valid SQL data types to the set
         VALID_SQL_DATA_TYPES.add("int");

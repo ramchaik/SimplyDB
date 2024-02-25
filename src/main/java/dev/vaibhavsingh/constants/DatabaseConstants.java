@@ -1,5 +1,8 @@
 package dev.vaibhavsingh.constants;
 
+/**
+ * The constants for the database
+ */
 public class DatabaseConstants {
     public static final String DATABASE_ROOT_FOLDER = "data";
     public static final String DATABASE_METADATA_FILE = "database_metadata.txt";

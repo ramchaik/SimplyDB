@@ -1,18 +1,20 @@
 package dev.vaibhavsingh.authentication;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 
-public class FileUserAuthenticatorTest {
-    private final FileUserAuthenticator userAuthenticator = new FileUserAuthenticator();
+class FileUserAuthenticatorTest {
+    FileUserAuthenticator fileUserAuthenticator = new FileUserAuthenticator();
 
     @Test
-    void authenticate_ValidCredentials_ReturnsTrue() {
-        assertTrue(userAuthenticator.authenticate("root", "root"));
+    void testAuthenticate() {
+        boolean result = fileUserAuthenticator.authenticate("root", "root");
+        Assertions.assertEquals(true, result);
     }
 
     @Test
-    void authenticate_InvalidCredentials_ReturnsFalse() {
-        assertFalse(userAuthenticator.authenticate("username", "password"));
+    void testHashPassword() {
+        String result = fileUserAuthenticator.hashPassword("password");
+        Assertions.assertEquals("5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8", result);
     }
 }

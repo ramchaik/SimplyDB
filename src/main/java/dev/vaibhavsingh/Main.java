@@ -16,6 +16,9 @@ import java.util.Date;
 import java.util.Scanner;
 
 public class Main {
+    /**
+     * This method initializes the admin database
+     */
     private static void init() {
         try {
             DatabaseManager.createDatabase("admin");
@@ -29,6 +32,10 @@ public class Main {
         }
     }
 
+    /**
+     * This method handles the user authentication process
+     * @param scanner Scanner object to read user input
+     */
     private static void handleUserAuth(Scanner scanner) {
         // Instantiate dependencies
         UserAuthenticator userAuthenticator = new FileUserAuthenticator();
@@ -41,6 +48,10 @@ public class Main {
         authenticatorManager.init(scanner);
     }
 
+    /**
+     * Main method
+     * @param args command line arguments
+     */
     public static void main(String[] args) {
         // setup admin database
         init();
@@ -81,6 +92,10 @@ public class Main {
         scanner.close();
     }
 
+    /**
+     * This method processes the user query
+     * @param query the user query
+     */
     public static void processQuery(String query) {
         SQLParser parser = SQLParserFactory.getParser(query);
         boolean isValid = parser.isValidQuery(query);
@@ -88,7 +103,6 @@ public class Main {
         if (!isValid) {
             System.out.println("Invalid query. Please enter a valid SQL query.");
         } else {
-//                    System.out.println("Query is valid. Executing the query...");
             QueryProcessor processor = QueryProcessorFactory.getQueryProcessor(parser);
             processor.process(query);
         }

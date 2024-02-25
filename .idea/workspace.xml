@@ -4,32 +4,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4a802b0-ade9-4112-8627-82f4f89071d5" name="Changes" comment="&#10;&#10;# 50-character subject line&#10;#&#10;# 72-character wrapped longer description. This should answer:&#10;#&#10;# * Why was this change necessary?&#10;# * How does it address the problem?&#10;# * Are there any side effects?&#10;#&#10;# Include a link to the ticket, if any.&#10;#&#10;# Add co-authors if you worked on this code with others:&#10;#&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/parser/CreateDatabaseParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/parser/TransactionParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/processor/CreateDatabaseProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/processor/InsertQueryProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/processor/QueryProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/processor/QueryProcessorFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/processor/SelectQueryProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/processor/TransactionProcessor.java" afterDir="false" />
+    <list default="true" id="a4a802b0-ade9-4112-8627-82f4f89071d5" name="Changes" comment="refactor: package&#10;&#10;# 50-character subject line&#10;#&#10;# 72-character wrapped longer description. This should answer:&#10;#&#10;# * Why was this change necessary?&#10;# * How does it address the problem?&#10;# * Are there any side effects?&#10;#&#10;# Include a link to the ticket, if any.&#10;#&#10;# Add co-authors if you worked on this code with others:&#10;#&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;">
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/parser/UpdateQueryParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/processor/UpdateQueryProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dev/vaibhavsingh/MainTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dev/vaibhavsingh/authentication/RandomCaptchaGeneratorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dev/vaibhavsingh/parser/SQLParserFactoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dev/vaibhavsingh/parser/TransactionParserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dev/vaibhavsingh/processor/QueryProcessorFactoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dev/vaibhavsingh/processor/TransactionProcessorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/authentication/FileUserAuthenticator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/authentication/FileUserAuthenticator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/authentication/RandomCaptchaGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/authentication/RandomCaptchaGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/authentication/UserAuthenticatorManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/authentication/UserAuthenticatorManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/controller/QueryProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/processor/CreateQueryProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/data/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/data/DatabaseManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/constants/DatabaseConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/constants/DatabaseConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/dao/ParsedColumn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/dao/ParsedColumn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/dao/ParsedSQLQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/dao/ParsedSQLQuery.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/data/TableManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/data/TableManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/parser/query/CreateQueryParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/parser/CreateQueryParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/parser/query/InsertQueryParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/parser/InsertQueryParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/parser/query/SQLParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/parser/SQLParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/parser/query/SQLParserFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/parser/SQLParserFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/parser/query/SelectQueryParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/parser/SelectQueryParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/utils/AESEncryption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/data/AESEncryption.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dev/vaibhavsingh/controller/QueryProcessorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dev/vaibhavsingh/controller/QueryProcessorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/parser/CreateDatabaseParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/parser/CreateDatabaseParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/parser/CreateQueryParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/parser/CreateQueryParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/parser/InsertQueryParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/parser/InsertQueryParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/parser/SQLParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/parser/SQLParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/parser/SQLParserFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/parser/SQLParserFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/parser/SelectQueryParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/parser/SelectQueryParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/parser/TransactionParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/parser/TransactionParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/processor/CreateDatabaseProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/processor/CreateDatabaseProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/processor/CreateQueryProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/processor/CreateQueryProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/processor/InsertQueryProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/processor/InsertQueryProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/processor/QueryProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/processor/QueryProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/processor/QueryProcessorFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/processor/QueryProcessorFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/processor/SelectQueryProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/processor/SelectQueryProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/processor/TransactionProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/processor/TransactionProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dev/vaibhavsingh/authentication/FileUserAuthenticatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dev/vaibhavsingh/authentication/FileUserAuthenticatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dev/vaibhavsingh/controller/QueryProcessorTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/dev/vaibhavsingh/data/AESEncryptionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dev/vaibhavsingh/data/AESEncryptionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dev/vaibhavsingh/data/TableManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dev/vaibhavsingh/data/TableManagerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,10 +48,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit4 &amp; Mockito" />
-        <option value="JUnit5 &amp; Mockito" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit4 &amp; Mockito" />
+        <option value="JUnit5 &amp; Mockito" />
       </list>
     </option>
   </component>
@@ -73,14 +82,52 @@
     "Application.Test.executor": "Run",
     "JUnit.AESEncryptionTest.executor": "Run",
     "JUnit.AESEncryptionTest.testDecryptionWithInvalidKey.executor": "Run",
+    "JUnit.AESEncryptionTest.testEncrypt.executor": "Run",
     "JUnit.AESEncryptionTest.testEncryptionAndDecryption.executor": "Debug",
     "JUnit.AESEncryptionTest.testEncryptionWithInvalidKey.executor": "Run",
     "JUnit.DatabaseManagerTest.executor": "Run",
+    "JUnit.DatabaseManagerTest.testCreateDatabase.executor": "Run",
     "JUnit.DatabaseManagerTest.testCreateDatabase_AlreadyExists.executor": "Run",
     "JUnit.DatabaseManagerTest.testCreateDatabase_Success.executor": "Run",
+    "JUnit.DatabaseManagerTest.testReadDatabaseMetadata.executor": "Run",
     "JUnit.FileUserAuthenticatorTest.authenticate_ValidCredentials_ReturnsTrue.executor": "Run",
     "JUnit.FileUserAuthenticatorTest.executor": "Run",
+    "JUnit.FileUserAuthenticatorTest.testAuthenticate.executor": "Run",
+    "JUnit.FileUserAuthenticatorTest.testHashPassword.executor": "Run",
+    "JUnit.MainTest.testMain.executor": "Run",
+    "JUnit.MainTest.testProcessQuery.executor": "Run",
+    "JUnit.QueryProcessorFactoryTest.executor": "Run",
+    "JUnit.QueryProcessorFactoryTest.testGetCreateDatabaseProcessor.executor": "Run",
+    "JUnit.QueryProcessorFactoryTest.testGetCreateQueryProcessor.executor": "Run",
+    "JUnit.QueryProcessorFactoryTest.testGetQueryProcessor.executor": "Run",
+    "JUnit.QueryProcessorFactoryTest.testGetUpdateQueryProcessor.executor": "Run",
+    "JUnit.RandomCaptchaGeneratorTest.testGenerateCaptcha.executor": "Run",
+    "JUnit.SQLParserFactoryTest.executor": "Run",
+    "JUnit.SQLParserFactoryTest.testGetParser.executor": "Run",
+    "JUnit.SQLParserFactoryTest.testGetParserForCreateDatabaseQuery.executor": "Run",
+    "JUnit.SQLParserFactoryTest.testGetParserForCreateQuery.executor": "Run",
+    "JUnit.SQLParserFactoryTest.testGetParserForEmptyQuery.executor": "Run",
+    "JUnit.SQLParserFactoryTest.testGetParserForInsertQuery.executor": "Run",
+    "JUnit.SQLParserFactoryTest.testGetParserForTransactionQuery.executor": "Run",
+    "JUnit.SQLParserFactoryTest.testGetParserForUnsupportedQuery.executor": "Run",
     "JUnit.TableManagerTest.executor": "Run",
+    "JUnit.TableManagerTest.testCreateTable.executor": "Run",
+    "JUnit.TableManagerTest.testLockTable.executor": "Run",
+    "JUnit.TransactionParserTest.executor": "Run",
+    "JUnit.TransactionParserTest.testGetQueryType.executor": "Run",
+    "JUnit.TransactionParserTest.testGetTableName.executor": "Run",
+    "JUnit.TransactionParserTest.testGetValues.executor": "Run",
+    "JUnit.TransactionParserTest.testIsValidQuery.executor": "Run",
+    "JUnit.TransactionParserTest.testParse.executor": "Run",
+    "JUnit.TransactionProcessorTest.executor": "Run",
+    "JUnit.TransactionProcessorTest.testAddQueryToBuffer.executor": "Run",
+    "JUnit.TransactionProcessorTest.testCommit.executor": "Run",
+    "JUnit.TransactionProcessorTest.testRollback.executor": "Run",
+    "JUnit.TransactionProcessorTest.testStart.executor": "Run",
+    "Maven.simple-dbms [clean].executor": "Run",
+    "Maven.simple-dbms [compile].executor": "Run",
+    "Maven.simple-dbms [install].executor": "Run",
+    "Maven.simple-dbms [package].executor": "Run",
     "Maven.simple-dbms.executor": "Run",
     "OverrideImplement.generate.javadoc": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -117,35 +164,8 @@
       <recent name="dev.vaibhavsingh.dto" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="CreateQueryParser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dev.vaibhavsingh.parser.query.CreateQueryParser" />
-      <module name="simple-dbms" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dev.vaibhavsingh.parser.query.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InsertQueryParser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dev.vaibhavsingh.parser.query.InsertQueryParser" />
-      <module name="simple-dbms" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dev.vaibhavsingh.parser.query.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dev.vaibhavsingh.Main" />
+  <component name="RunManager" selected="JUnit.MainTest.testProcessQuery">
+    <configuration name="MainTest.testMain" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="simple-dbms" />
       <extension name="coverage">
         <pattern>
@@ -153,25 +173,15 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="dev.vaibhavsingh" />
+      <option name="MAIN_CLASS_NAME" value="dev.vaibhavsingh.MainTest" />
+      <option name="METHOD_NAME" value="testMain" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SelectQueryParser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dev.vaibhavsingh.parser.query.SelectQueryParser" />
-      <module name="simple-dbms" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dev.vaibhavsingh.parser.query.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dev.vaibhavsingh.Test" />
+    <configuration name="MainTest.testProcessQuery" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="simple-dbms" />
       <extension name="coverage">
         <pattern>
@@ -179,17 +189,68 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="dev.vaibhavsingh" />
+      <option name="MAIN_CLASS_NAME" value="dev.vaibhavsingh.MainTest" />
+      <option name="METHOD_NAME" value="testProcessQuery" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TransactionProcessorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="simple-dbms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dev.vaibhavsingh.processor.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dev.vaibhavsingh.processor" />
+      <option name="MAIN_CLASS_NAME" value="dev.vaibhavsingh.processor.TransactionProcessorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TransactionProcessorTest.testCommit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="simple-dbms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dev.vaibhavsingh.processor.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dev.vaibhavsingh.processor" />
+      <option name="MAIN_CLASS_NAME" value="dev.vaibhavsingh.processor.TransactionProcessorTest" />
+      <option name="METHOD_NAME" value="testCommit" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TransactionProcessorTest.testRollback" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="simple-dbms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dev.vaibhavsingh.processor.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dev.vaibhavsingh.processor" />
+      <option name="MAIN_CLASS_NAME" value="dev.vaibhavsingh.processor.TransactionProcessorTest" />
+      <option name="METHOD_NAME" value="testRollback" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Test" />
-        <item itemvalue="Application.SelectQueryParser" />
-        <item itemvalue="Application.InsertQueryParser" />
-        <item itemvalue="Application.CreateQueryParser" />
+        <item itemvalue="JUnit.MainTest.testProcessQuery" />
+        <item itemvalue="JUnit.MainTest.testMain" />
+        <item itemvalue="JUnit.TransactionProcessorTest" />
+        <item itemvalue="JUnit.TransactionProcessorTest.testCommit" />
+        <item itemvalue="JUnit.TransactionProcessorTest.testRollback" />
       </list>
     </recent_temporary>
   </component>
@@ -215,7 +276,7 @@
       <workItem from="1708402756932" duration="10612000" />
       <workItem from="1708464493148" duration="11546000" />
       <workItem from="1708529797364" duration="3000" />
-      <workItem from="1708703109365" duration="23765000" />
+      <workItem from="1708703109365" duration="43496000" />
     </task>
     <task id="LOCAL-00001" summary="feat: setup initial&#10;&#10;# 50-character subject line&#10;#&#10;# 72-character wrapped longer description. This should answer:&#10;#&#10;# * Why was this change necessary?&#10;# * How does it address the problem?&#10;# * Are there any side effects?&#10;#&#10;# Include a link to the ticket, if any.&#10;#&#10;# Add co-authors if you worked on this code with others:&#10;#&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;">
       <option name="closed" value="true" />
@@ -345,7 +406,23 @@
       <option name="project" value="LOCAL" />
       <updated>1708482133107</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="feat: add transaction and sql processors&#10;&#10;# 50-character subject line&#10;#&#10;# 72-character wrapped longer description. This should answer:&#10;#&#10;# * Why was this change necessary?&#10;# * How does it address the problem?&#10;# * Are there any side effects?&#10;#&#10;# Include a link to the ticket, if any.&#10;#&#10;# Add co-authors if you worked on this code with others:&#10;#&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;">
+      <option name="closed" value="true" />
+      <created>1708747262975</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1708747262975</updated>
+    </task>
+    <task id="LOCAL-00018" summary="refactor: package&#10;&#10;# 50-character subject line&#10;#&#10;# 72-character wrapped longer description. This should answer:&#10;#&#10;# * Why was this change necessary?&#10;# * How does it address the problem?&#10;# * Are there any side effects?&#10;#&#10;# Include a link to the ticket, if any.&#10;#&#10;# Add co-authors if you worked on this code with others:&#10;#&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;">
+      <option name="closed" value="true" />
+      <created>1708752227479</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1708752227480</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -370,32 +447,16 @@
     <MESSAGE value="feat: add lock on table &#10;&#10;# 50-character subject line&#10;#&#10;# 72-character wrapped longer description. This should answer:&#10;#&#10;# * Why was this change necessary?&#10;# * How does it address the problem?&#10;# * Are there any side effects?&#10;#&#10;# Include a link to the ticket, if any.&#10;#&#10;# Add co-authors if you worked on this code with others:&#10;#&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;" />
     <MESSAGE value="feat: test query processor; add mockito&#10;&#10;# 50-character subject line&#10;#&#10;# 72-character wrapped longer description. This should answer:&#10;#&#10;# * Why was this change necessary?&#10;# * How does it address the problem?&#10;# * Are there any side effects?&#10;#&#10;# Include a link to the ticket, if any.&#10;#&#10;# Add co-authors if you worked on this code with others:&#10;#&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;" />
     <MESSAGE value="feat: add parser for select, create, insert query&#10;&#10;# 50-character subject line&#10;#&#10;# 72-character wrapped longer description. This should answer:&#10;#&#10;# * Why was this change necessary?&#10;# * How does it address the problem?&#10;# * Are there any side effects?&#10;#&#10;# Include a link to the ticket, if any.&#10;#&#10;# Add co-authors if you worked on this code with others:&#10;#&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add parser for select, create, insert query&#10;&#10;# 50-character subject line&#10;#&#10;# 72-character wrapped longer description. This should answer:&#10;#&#10;# * Why was this change necessary?&#10;# * How does it address the problem?&#10;# * Are there any side effects?&#10;#&#10;# Include a link to the ticket, if any.&#10;#&#10;# Add co-authors if you worked on this code with others:&#10;#&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/data/DatabaseManager.java</url>
-          <line>43</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/data/DatabaseManager.java</url>
-          <line>48</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/data/DatabaseManager.java</url>
-          <line>49</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="feat: add transaction and sql processors&#10;&#10;# 50-character subject line&#10;#&#10;# 72-character wrapped longer description. This should answer:&#10;#&#10;# * Why was this change necessary?&#10;# * How does it address the problem?&#10;# * Are there any side effects?&#10;#&#10;# Include a link to the ticket, if any.&#10;#&#10;# Add co-authors if you worked on this code with others:&#10;#&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;" />
+    <MESSAGE value="refactor: package&#10;&#10;# 50-character subject line&#10;#&#10;# 72-character wrapped longer description. This should answer:&#10;#&#10;# * Why was this change necessary?&#10;# * How does it address the problem?&#10;# * Are there any side effects?&#10;#&#10;# Include a link to the ticket, if any.&#10;#&#10;# Add co-authors if you worked on this code with others:&#10;#&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: package&#10;&#10;# 50-character subject line&#10;#&#10;# 72-character wrapped longer description. This should answer:&#10;#&#10;# * Why was this change necessary?&#10;# * How does it address the problem?&#10;# * Are there any side effects?&#10;#&#10;# Include a link to the ticket, if any.&#10;#&#10;# Add co-authors if you worked on this code with others:&#10;#&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/simple_dbms$Main.ic" NAME="Main Coverage Results" MODIFIED="1708445723900" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>dev.vaibhavsingh.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/simple_dbms$AESEncryptionTest_testEncrypt.ic" NAME="AESEncryptionTest.testEncrypt Coverage Results" MODIFIED="1708836056843" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>dev.vaibhavsingh.data.*</FILTER>
     </SUITE>
   </component>
 </project>

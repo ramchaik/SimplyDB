@@ -6,6 +6,11 @@ import java.util.Random;
  * Generates random CAPTCHA codes.
  */
 public class RandomCaptchaGenerator implements CaptchaGenerator {
+    /**
+     * Generates a random CAPTCHA code.
+     *
+     * @return CAPTCHA code.
+     */
     @Override
     public String generateCaptcha() {
         // Define the characters to use for the CAPTCHA code

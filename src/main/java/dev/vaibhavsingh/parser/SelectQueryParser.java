@@ -8,7 +8,9 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class SelectQueryParser implements SQLParser {
-    // Regular expression to match SELECT query pattern
+    /**
+     * Regular expression to match SELECT query pattern
+     */
     private static final String SELECT_QUERY_REGEX = "^\\s*SELECT\\s+(.+)\\s+FROM\\s+(\\w+)(\\s+WHERE\\s+(.+))?;$";
 
     /**
@@ -20,6 +22,11 @@ public class SelectQueryParser implements SQLParser {
         return "SELECT";
     }
 
+    /**
+     * This method checks if the given query is a valid SELECT query
+     * @param query SQL query
+     * @return true if the query is valid, false otherwise
+     */
     @Override
     public boolean isValidQuery(String query) {
         Pattern pattern = Pattern.compile(SELECT_QUERY_REGEX, Pattern.CASE_INSENSITIVE);
@@ -27,6 +34,11 @@ public class SelectQueryParser implements SQLParser {
         return matcher.matches();
     }
 
+    /**
+     * This method returns the table name from the query
+     * @param query SQL query
+     * @return table name
+     */
     @Override
     public String getTableName(String query) {
         Pattern pattern = Pattern.compile(SELECT_QUERY_REGEX, Pattern.CASE_INSENSITIVE);
@@ -38,6 +50,11 @@ public class SelectQueryParser implements SQLParser {
         }
     }
 
+    /**
+     * This method returns the column names from the query
+     * @param query SQL query
+     * @return column names
+     */
     @Override
     public String getValues(String query) {
         Pattern pattern = Pattern.compile(SELECT_QUERY_REGEX, Pattern.CASE_INSENSITIVE);
@@ -84,6 +101,11 @@ public class SelectQueryParser implements SQLParser {
         }
     }
 
+    /**
+     * This method returns the WHERE clause from the query
+     * @param query SQL query
+     * @return WHERE clause from the query
+     */
     public String getWhereClause(String query) {
         Pattern pattern = Pattern.compile(SELECT_QUERY_REGEX, Pattern.CASE_INSENSITIVE);
         Matcher matcher = pattern.matcher(query.trim());

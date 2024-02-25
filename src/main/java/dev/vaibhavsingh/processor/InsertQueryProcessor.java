@@ -6,14 +6,23 @@ import dev.vaibhavsingh.dao.ParsedSQLQuery;
 import dev.vaibhavsingh.parser.SQLParser;
 
 public class InsertQueryProcessor implements QueryProcessor {
+    /**
+     * The SQL parser
+     */
     SQLParser parser;
 
+    /**
+     * Constructor for InsertQueryProcessor
+     * @param parser the SQL parser
+     */
     public InsertQueryProcessor(SQLParser parser) {
         this.parser = parser;
     }
 
     /**
-     * takes string input and returns boolean true if successful else false
+     * Processes the INSERT query
+     * @param query the query to be processed
+     * @return true if the query is processed successfully, false otherwise
      */
     @Override
     public boolean process(String query) {

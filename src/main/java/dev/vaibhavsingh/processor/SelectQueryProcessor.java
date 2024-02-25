@@ -12,13 +12,25 @@ import java.util.List;
 
 import static dev.vaibhavsingh.data.TableManager.TABLE_DELIMITER;
 
+/**
+ * Processor for SELECT query
+ */
 public class SelectQueryProcessor implements QueryProcessor {
     SQLParser parser;
 
+    /**
+     * Constructor for SelectQueryProcessor
+     * @param parser the SQL parser
+     */
     public SelectQueryProcessor(SQLParser parser) {
         this.parser = parser;
     }
 
+    /**
+     * Processes the SELECT query
+     * @param query the query to be processed
+     * @return true if the query is processed successfully, false otherwise
+     */
     @Override
     public boolean process(String query) {
         // parse the query using the SQLParserFactory
@@ -57,6 +69,12 @@ public class SelectQueryProcessor implements QueryProcessor {
         return true;
     }
 
+    /**
+     * Print the selected columns from the table
+     * @param tableColumns - the columns of the table
+     * @param valuesFromTable - the values from the table
+     * @param columnsToShow - the columns to show
+     */
     private void printSelectedColumns(ArrayList<String> tableColumns, ArrayList<String> valuesFromTable, List<String> columnsToShow) {
         List<Integer> valueIdxToPick = new ArrayList<>();
         for (String column : columnsToShow) {
@@ -88,6 +106,10 @@ public class SelectQueryProcessor implements QueryProcessor {
         }
     }
 
+    /**
+     * Print the column names of the table
+     * @param tableColumns - the columns of the table
+     */
     public void printColumnNames(List<String> tableColumns) {
         for (String column : tableColumns) {
             System.out.print(column.trim().toUpperCase() + "\t");
@@ -96,6 +118,12 @@ public class SelectQueryProcessor implements QueryProcessor {
     }
 
 
+    /**
+     * Print all the rows of the table
+     * @param tableName - the name of the table
+     * @param valuesFromTable - the values from the table
+     * @param parsedWhereClauses - the parsed where clauses
+     */
     public void printAllTable(String tableName, ArrayList<String> valuesFromTable, ArrayList<ParsedColumn> parsedWhereClauses) {
         for (String row : valuesFromTable) {
             String[] columns = row.split(TABLE_DELIMITER);
@@ -110,6 +138,12 @@ public class SelectQueryProcessor implements QueryProcessor {
         }
     }
 
+    /**
+     * Check if the row matches the where clause
+     * @param tableName - the name of the table
+     * @param columns - the columns of the table
+     * @param parsedWhereClauses - the parsed where clauses
+     */
     private void checkIfRowMatchesWhereClause(String tableName, String[] columns, ArrayList<ParsedColumn> parsedWhereClauses) {
         // go through each where clause and check if the row matches the where clause
         for (ParsedColumn parsedColumn : parsedWhereClauses) {

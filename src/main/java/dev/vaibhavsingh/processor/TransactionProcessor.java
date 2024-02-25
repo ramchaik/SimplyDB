@@ -6,9 +6,18 @@ import java.util.Queue;
 import static dev.vaibhavsingh.Main.processQuery;
 
 public class TransactionProcessor implements QueryProcessor {
+    /**
+     * The buffer to store the queries
+     */
     public static Queue<String> buffer = new LinkedList<>();
+    /**
+     * The flag to check if the transaction is in progress
+     */
     public static boolean inTransaction;
 
+    /**
+     * Enables the transaction
+     */
     private static void enableTransaction() {
         if (inTransaction) {
             throw new IllegalArgumentException("Transaction already in progress");
@@ -16,6 +25,9 @@ public class TransactionProcessor implements QueryProcessor {
         TransactionProcessor.inTransaction = true;
     }
 
+    /**
+     * Disables the transaction
+     */
     private static void disableTransaction() {
         if (!inTransaction) {
             throw new IllegalArgumentException("Transaction not in progress");
@@ -23,10 +35,18 @@ public class TransactionProcessor implements QueryProcessor {
         TransactionProcessor.inTransaction = false;
     }
 
+    /**
+     * Checks if the transaction is in progress
+     * @return true if the transaction is in progress, false otherwise
+     */
     public static boolean isInTransaction() {
         return inTransaction;
     }
 
+    /**
+     * Starts the transaction
+     * @return true if the transaction is started, false otherwise
+     */
     public static boolean start() {
         if (inTransaction) {
             throw new IllegalArgumentException("Transaction already in progress");
@@ -36,6 +56,10 @@ public class TransactionProcessor implements QueryProcessor {
         return true;
     }
 
+    /**
+     * Rolls back the transaction
+     * @return true if the transaction is rolled back, false otherwise
+     */
     public static boolean rollback() {
         if (!inTransaction) {
             throw new IllegalArgumentException("Transaction not in progress");
@@ -45,6 +69,10 @@ public class TransactionProcessor implements QueryProcessor {
         return true;
     }
 
+    /**
+     * Commits the transaction
+     * @return true if the transaction is committed, false otherwise
+     */
     public static boolean commit() {
         if (!inTransaction) {
             throw new IllegalArgumentException("Transaction not in progress");
@@ -58,11 +86,21 @@ public class TransactionProcessor implements QueryProcessor {
         return true;
     }
 
+    /**
+     * Adds the query to the buffer
+     * @param query the query to be added to the buffer
+     * @return true if the query is added to the buffer, false otherwise
+     */
     public static boolean addQueryToBuffer(String query) {
         buffer.add(query);
         return true;
     }
 
+    /**
+     * Processes the query
+     * @param query the query to be processed
+     * @return true if the query is processed successfully, false otherwise
+     */
     @Override
     public boolean process(String query) {
         // if query is start transaction

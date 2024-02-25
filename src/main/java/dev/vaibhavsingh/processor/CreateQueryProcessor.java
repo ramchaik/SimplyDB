@@ -7,12 +7,23 @@ import dev.vaibhavsingh.parser.SQLParser;
 import static dev.vaibhavsingh.constants.DatabaseConstants.DATABASE_NAME;
 
 public class CreateQueryProcessor implements QueryProcessor {
+    /**
+     * The SQL parser
+     */
     SQLParser parser;
+    /**
+     * Constructor for CreateQueryProcessor
+     * @param parser the SQL parser
+     */
     public CreateQueryProcessor(SQLParser parser) {
         this.parser = parser;
     }
 
-    // takes string input and returns boolean true if successful else false
+    /**
+     * Processes the CREATE query
+     * @param query the query to be processed
+     * @return true if the query is processed successfully, false otherwise
+     */
     @Override
     public boolean process(String query) {
         // parse the query using the SQLParserFactory
