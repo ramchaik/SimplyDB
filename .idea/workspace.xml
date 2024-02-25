@@ -4,41 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4a802b0-ade9-4112-8627-82f4f89071d5" name="Changes" comment="refactor: package&#10;&#10;# 50-character subject line&#10;#&#10;# 72-character wrapped longer description. This should answer:&#10;#&#10;# * Why was this change necessary?&#10;# * How does it address the problem?&#10;# * Are there any side effects?&#10;#&#10;# Include a link to the ticket, if any.&#10;#&#10;# Add co-authors if you worked on this code with others:&#10;#&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/parser/UpdateQueryParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/processor/UpdateQueryProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/dev/vaibhavsingh/MainTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/dev/vaibhavsingh/authentication/RandomCaptchaGeneratorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/dev/vaibhavsingh/parser/SQLParserFactoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/dev/vaibhavsingh/parser/TransactionParserTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/dev/vaibhavsingh/processor/QueryProcessorFactoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/dev/vaibhavsingh/processor/TransactionProcessorTest.java" afterDir="false" />
+    <list default="true" id="a4a802b0-ade9-4112-8627-82f4f89071d5" name="Changes" comment="feat: add tests and docs&#10;&#10;# 50-character subject line&#10;#&#10;# 72-character wrapped longer description. This should answer:&#10;#&#10;# * Why was this change necessary?&#10;# * How does it address the problem?&#10;# * Are there any side effects?&#10;#&#10;# Include a link to the ticket, if any.&#10;#&#10;# Add co-authors if you worked on this code with others:&#10;#&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;">
+      <change afterPath="$PROJECT_DIR$/src/test/java/dev/vaibhavsingh/parser/SQLParserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dev/vaibhavsingh/parser/SelectQueryParserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dev/vaibhavsingh/processor/QueryProcessorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/authentication/RandomCaptchaGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/authentication/RandomCaptchaGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/authentication/UserAuthenticatorManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/authentication/UserAuthenticatorManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/constants/DatabaseConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/constants/DatabaseConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/dao/ParsedColumn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/dao/ParsedColumn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/dao/ParsedSQLQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/dao/ParsedSQLQuery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/data/TableManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/data/TableManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/parser/CreateDatabaseParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/parser/CreateDatabaseParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/parser/CreateQueryParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/parser/CreateQueryParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/parser/InsertQueryParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/parser/InsertQueryParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/parser/SQLParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/parser/SQLParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/parser/SQLParserFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/parser/SQLParserFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/parser/SelectQueryParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/parser/SelectQueryParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/parser/TransactionParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/parser/TransactionParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/processor/CreateDatabaseProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/processor/CreateDatabaseProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/processor/CreateQueryProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/processor/CreateQueryProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/processor/InsertQueryProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/processor/InsertQueryProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/processor/QueryProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/processor/QueryProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/processor/QueryProcessorFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/processor/QueryProcessorFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/processor/SelectQueryProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/processor/SelectQueryProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/processor/TransactionProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/vaibhavsingh/processor/TransactionProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dev/vaibhavsingh/authentication/FileUserAuthenticatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dev/vaibhavsingh/authentication/FileUserAuthenticatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dev/vaibhavsingh/controller/QueryProcessorTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dev/vaibhavsingh/data/AESEncryptionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dev/vaibhavsingh/data/AESEncryptionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dev/vaibhavsingh/data/TableManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dev/vaibhavsingh/data/TableManagerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dev/vaibhavsingh/processor/TransactionProcessorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dev/vaibhavsingh/processor/TransactionProcessorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,6 +81,12 @@
     "JUnit.SQLParserFactoryTest.testGetParserForInsertQuery.executor": "Run",
     "JUnit.SQLParserFactoryTest.testGetParserForTransactionQuery.executor": "Run",
     "JUnit.SQLParserFactoryTest.testGetParserForUnsupportedQuery.executor": "Run",
+    "JUnit.SelectQueryParserTest.testGetQueryType.executor": "Run",
+    "JUnit.SelectQueryParserTest.testGetTableName.executor": "Run",
+    "JUnit.SelectQueryParserTest.testGetValues.executor": "Run",
+    "JUnit.SelectQueryParserTest.testGetWhereClause.executor": "Run",
+    "JUnit.SelectQueryParserTest.testParse.executor": "Run",
+    "JUnit.SelectQueryParserTest.testParseWhere.executor": "Run",
     "JUnit.TableManagerTest.executor": "Run",
     "JUnit.TableManagerTest.testCreateTable.executor": "Run",
     "JUnit.TableManagerTest.testLockTable.executor": "Run",
@@ -164,81 +141,82 @@
       <recent name="dev.vaibhavsingh.dto" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MainTest.testProcessQuery">
-    <configuration name="MainTest.testMain" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.SelectQueryParserTest.testParse">
+    <configuration name="SelectQueryParserTest.testGetTableName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="simple-dbms" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dev.vaibhavsingh.*" />
+          <option name="PATTERN" value="dev.vaibhavsingh.parser.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="dev.vaibhavsingh" />
-      <option name="MAIN_CLASS_NAME" value="dev.vaibhavsingh.MainTest" />
-      <option name="METHOD_NAME" value="testMain" />
+      <option name="PACKAGE_NAME" value="dev.vaibhavsingh.parser" />
+      <option name="MAIN_CLASS_NAME" value="dev.vaibhavsingh.parser.SelectQueryParserTest" />
+      <option name="METHOD_NAME" value="testGetTableName" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainTest.testProcessQuery" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SelectQueryParserTest.testGetValues" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="simple-dbms" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dev.vaibhavsingh.*" />
+          <option name="PATTERN" value="dev.vaibhavsingh.parser.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="dev.vaibhavsingh" />
-      <option name="MAIN_CLASS_NAME" value="dev.vaibhavsingh.MainTest" />
-      <option name="METHOD_NAME" value="testProcessQuery" />
+      <option name="PACKAGE_NAME" value="dev.vaibhavsingh.parser" />
+      <option name="MAIN_CLASS_NAME" value="dev.vaibhavsingh.parser.SelectQueryParserTest" />
+      <option name="METHOD_NAME" value="testGetValues" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TransactionProcessorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SelectQueryParserTest.testGetWhereClause" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="simple-dbms" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dev.vaibhavsingh.processor.*" />
+          <option name="PATTERN" value="dev.vaibhavsingh.parser.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="dev.vaibhavsingh.processor" />
-      <option name="MAIN_CLASS_NAME" value="dev.vaibhavsingh.processor.TransactionProcessorTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TransactionProcessorTest.testCommit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="simple-dbms" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dev.vaibhavsingh.processor.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="dev.vaibhavsingh.processor" />
-      <option name="MAIN_CLASS_NAME" value="dev.vaibhavsingh.processor.TransactionProcessorTest" />
-      <option name="METHOD_NAME" value="testCommit" />
+      <option name="PACKAGE_NAME" value="dev.vaibhavsingh.parser" />
+      <option name="MAIN_CLASS_NAME" value="dev.vaibhavsingh.parser.SelectQueryParserTest" />
+      <option name="METHOD_NAME" value="testGetWhereClause" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TransactionProcessorTest.testRollback" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SelectQueryParserTest.testParse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="simple-dbms" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dev.vaibhavsingh.processor.*" />
+          <option name="PATTERN" value="dev.vaibhavsingh.parser.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="dev.vaibhavsingh.processor" />
-      <option name="MAIN_CLASS_NAME" value="dev.vaibhavsingh.processor.TransactionProcessorTest" />
-      <option name="METHOD_NAME" value="testRollback" />
+      <option name="PACKAGE_NAME" value="dev.vaibhavsingh.parser" />
+      <option name="MAIN_CLASS_NAME" value="dev.vaibhavsingh.parser.SelectQueryParserTest" />
+      <option name="METHOD_NAME" value="testParse" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SelectQueryParserTest.testParseWhere" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="simple-dbms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dev.vaibhavsingh.parser.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dev.vaibhavsingh.parser" />
+      <option name="MAIN_CLASS_NAME" value="dev.vaibhavsingh.parser.SelectQueryParserTest" />
+      <option name="METHOD_NAME" value="testParseWhere" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -246,11 +224,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MainTest.testProcessQuery" />
-        <item itemvalue="JUnit.MainTest.testMain" />
-        <item itemvalue="JUnit.TransactionProcessorTest" />
-        <item itemvalue="JUnit.TransactionProcessorTest.testCommit" />
-        <item itemvalue="JUnit.TransactionProcessorTest.testRollback" />
+        <item itemvalue="JUnit.SelectQueryParserTest.testParse" />
+        <item itemvalue="JUnit.SelectQueryParserTest.testParseWhere" />
+        <item itemvalue="JUnit.SelectQueryParserTest.testGetWhereClause" />
+        <item itemvalue="JUnit.SelectQueryParserTest.testGetValues" />
+        <item itemvalue="JUnit.SelectQueryParserTest.testGetTableName" />
       </list>
     </recent_temporary>
   </component>
@@ -276,7 +254,7 @@
       <workItem from="1708402756932" duration="10612000" />
       <workItem from="1708464493148" duration="11546000" />
       <workItem from="1708529797364" duration="3000" />
-      <workItem from="1708703109365" duration="43496000" />
+      <workItem from="1708703109365" duration="44380000" />
     </task>
     <task id="LOCAL-00001" summary="feat: setup initial&#10;&#10;# 50-character subject line&#10;#&#10;# 72-character wrapped longer description. This should answer:&#10;#&#10;# * Why was this change necessary?&#10;# * How does it address the problem?&#10;# * Are there any side effects?&#10;#&#10;# Include a link to the ticket, if any.&#10;#&#10;# Add co-authors if you worked on this code with others:&#10;#&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;">
       <option name="closed" value="true" />
@@ -422,7 +400,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708752227480</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="feat: add tests and docs&#10;&#10;# 50-character subject line&#10;#&#10;# 72-character wrapped longer description. This should answer:&#10;#&#10;# * Why was this change necessary?&#10;# * How does it address the problem?&#10;# * Are there any side effects?&#10;#&#10;# Include a link to the ticket, if any.&#10;#&#10;# Add co-authors if you worked on this code with others:&#10;#&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;">
+      <option name="closed" value="true" />
+      <created>1708838347243</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1708838347243</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -449,7 +435,8 @@
     <MESSAGE value="feat: add parser for select, create, insert query&#10;&#10;# 50-character subject line&#10;#&#10;# 72-character wrapped longer description. This should answer:&#10;#&#10;# * Why was this change necessary?&#10;# * How does it address the problem?&#10;# * Are there any side effects?&#10;#&#10;# Include a link to the ticket, if any.&#10;#&#10;# Add co-authors if you worked on this code with others:&#10;#&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;" />
     <MESSAGE value="feat: add transaction and sql processors&#10;&#10;# 50-character subject line&#10;#&#10;# 72-character wrapped longer description. This should answer:&#10;#&#10;# * Why was this change necessary?&#10;# * How does it address the problem?&#10;# * Are there any side effects?&#10;#&#10;# Include a link to the ticket, if any.&#10;#&#10;# Add co-authors if you worked on this code with others:&#10;#&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;" />
     <MESSAGE value="refactor: package&#10;&#10;# 50-character subject line&#10;#&#10;# 72-character wrapped longer description. This should answer:&#10;#&#10;# * Why was this change necessary?&#10;# * How does it address the problem?&#10;# * Are there any side effects?&#10;#&#10;# Include a link to the ticket, if any.&#10;#&#10;# Add co-authors if you worked on this code with others:&#10;#&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: package&#10;&#10;# 50-character subject line&#10;#&#10;# 72-character wrapped longer description. This should answer:&#10;#&#10;# * Why was this change necessary?&#10;# * How does it address the problem?&#10;# * Are there any side effects?&#10;#&#10;# Include a link to the ticket, if any.&#10;#&#10;# Add co-authors if you worked on this code with others:&#10;#&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;" />
+    <MESSAGE value="feat: add tests and docs&#10;&#10;# 50-character subject line&#10;#&#10;# 72-character wrapped longer description. This should answer:&#10;#&#10;# * Why was this change necessary?&#10;# * How does it address the problem?&#10;# * Are there any side effects?&#10;#&#10;# Include a link to the ticket, if any.&#10;#&#10;# Add co-authors if you worked on this code with others:&#10;#&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add tests and docs&#10;&#10;# 50-character subject line&#10;#&#10;# 72-character wrapped longer description. This should answer:&#10;#&#10;# * Why was this change necessary?&#10;# * How does it address the problem?&#10;# * Are there any side effects?&#10;#&#10;# Include a link to the ticket, if any.&#10;#&#10;# Add co-authors if you worked on this code with others:&#10;#&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;&#10;# Co-authored-by: Full Name &lt;email@example.com&gt;" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/simple_dbms$Main.ic" NAME="Main Coverage Results" MODIFIED="1708445723900" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
